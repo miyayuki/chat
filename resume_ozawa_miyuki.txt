@@ -64,6 +64,18 @@ http://business.nikkeibp.co.jp/campanella/
 ④留学
 2013年夏に、日本学術振興会の日中交流事業の一貫で、中国・復旦大学に交換留学生として一ヶ月滞在した。
 
+⑤小学生を対象としたICT教育の実施
+研究プロジェクトの一貫として、静岡県袋井市の小学生を対象に、センサネットワークに関する講義を行った。また指導の様子がNHK静岡のニュース番組内にて放送された。
+参考URL
+https://www.facebook.com/fuppyfukuroi/posts/131146923725420
+
+⑥研究室の紹介記事の執筆
+2011年と2013年に、大学のウェブサイトにて、所属研究室を紹介する記事を寄稿した。
+
+参考URL
+http://www.sfc.keio.ac.jp/introducing_labs/20110309_2.html
+http://www.sfc.keio.ac.jp/introducing_labs/20130122.html
+
 *** 技術的なバックグラウンド・プログラミング経歴
 
 プログラミング言語
@@ -101,3 +113,4 @@ Debian, Ubuntu
 Linux + Apache を用いたHTTPサーバの実装と運用
 上記サーバでのFacebookアプリの実装と運用
 組み込みLinux + lighttpdを用いた、センサネットワーク向けHTTPサーバの実装と運用
+Linux + Ruby on Rails を用いた在宅療養患者のための服薬モニタリングサービスの運用
