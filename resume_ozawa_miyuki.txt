@@ -9,6 +9,25 @@ https://github.com/melonsoda5ml
 2014年4月〜現在　株式会社日経BP
 - 経営情報広告2部にて、「日経ビジネス」を始めとする経済系の雑誌・Webサイトや、関連イベントの広告営業に従事。
 
+*** Webに関する職務経験
+
+「スキルアップ特集」
+- 日経BPウェブサイト内にタイアップ広告を掲載
+- 記事内容は「日経ビジネスアソシエ」9月号掲載記事の転載
+- ページ全体のディレクションを担当
+http://special.nikkeibp.co.jp/ts/article/ad0h/171202/
+
+「企業の成長を加速させる新・物流パートナーシップ」
+- 日経ビジネスオンライン内にタイアップ広告を掲載
+- 記事内容は「日経ビジネス　8月25日発売号」掲載記事の転載
+- ページ全体のディレクションを担当
+http://special.nikkeibp.co.jp/as/201407/logistics/
+
+「カンパネラ」
+アサヒビールと日経BP社の合同オウンドメディア
+サイト立ち上げに伴い、掲載コンテンツの取りまとめや進行管理を担当
+http://business.nikkeibp.co.jp/campanella/
+
 *** 職業上の成果
 
 ①新規顧客開拓
@@ -50,6 +69,7 @@ https://github.com/melonsoda5ml
 プログラミング言語
 C言語
 - ソート、バイナリサーチといった基本的なアルゴリズムの学習に利用
+
 Java
 - 独自チャットサーバ／クライアントの実装
 - HTTP、XMPP、UPnPなどを用いたセンサネットワークのシステムの実装　など
@@ -64,15 +84,20 @@ Ruby
 
 R
 - 統計学習や形態素解析の初歩的な学習に利用
-HTML, JavaScript
-- Facebookにて、自分のfriendの家族関係を分析するアプリを作成する際に利用
 
+HTML, JavaScript
+- Facebookアプリを作成する際に利用
 
 OS
 CentOS
-- センサネットワークの用いるための組み込み基盤として利用
+- センサネットワークを用いるための組み込み基盤として利用
 Debian, Ubuntu
 - ApacheやMySQLを用いたWebサーバやXMPPサーバの構築
 
 その他
 - Arduino, Gainerを用いた電子工作の経験
+
+*** Web技術に関する経験
+Linux + Apache を用いたHTTPサーバの実装と運用
+上記サーバでのFacebookアプリの実装と運用
+組み込みLinux + lighttpdを用いた、センサネットワーク向けHTTPサーバの実装と運用
