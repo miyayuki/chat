@@ -1,0 +1,12 @@
+controller
+
+def create
+  master_user_id = current.user_id
+  group_user_ids = param~~~
+  group_name = params~~~
+
+  Group.create_group(master_user_id,
+     group_user_ids,
+     group_name)
+
+end

@@ -1,0 +1,19 @@
+<h1>Users</h1>
+<ul class="users">
+	<% @users.each do |user| %>
+		<li>
+			User ID: <%= user.id %>
+			<ul>
+				<li>
+					<%= user.username %>
+				</li>
+				<li>
+					<%= user.email %>
+				</li>
+				<li>
+					Last login: <%= l user.last_sign_in_at.in_time_zone('Tokyo'), format: :datetime %>
+				</li>
+			</ul>
+		</li>
+	<% end %>
+</ul>
