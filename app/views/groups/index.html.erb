@@ -1,5 +1,6 @@
 <h1>Groups</h1>
 
+<% if user_signed_in? %>
 <ul class="groups">
 	<% @groups.each do |g| %>
 		<li>
@@ -9,3 +10,4 @@
 		</li>
 	<% end %>
 </ul>
+<% end %>
