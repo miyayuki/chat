@@ -1,0 +1,11 @@
+<h1>Groups</h1>
+
+<ul class="groups">
+	<% @groups.each do |g| %>
+		<li>
+			Group ID : <%= g.id %>
+			<br>
+			Group Name : <%= g.name %>
+		</li>
+	<% end %>
+</ul>
