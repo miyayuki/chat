@@ -22,10 +22,6 @@ test:
 
 production:
   adapter: postgresql
-  database: de8nop0t448tib
-  username: dvitrqizsohknc
-  password: QBBJP1j5bdgocziRVJdvf2ufhb
-  port: 5432
+  database: my_database_production
   pool: 5
-  encoding: utf8
   timeout: 5000

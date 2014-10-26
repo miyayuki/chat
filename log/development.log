@@ -12496,3 +12496,459 @@ Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-10-26 19:36:42 +0900
 
 
 Started GET "/assets/group.js?body=1" for 127.0.0.1 at 2014-10-26 19:36:42 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.3ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_sessions_on_updated_at' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_sessions_on_updated_at' AND type='index'
+[0m
+  [1m[35m (0.3ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_sessions_on_session_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_sessions_on_session_id' AND type='index'
+
+  [1m[36m (0.3ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_username' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_username' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-26 23:33:25 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  [1m[35mActiveRecord::SessionStore::Session Load (1.2ms)[0m  SELECT  "sessions".* FROM "sessions"  WHERE "sessions"."session_id" = '999c50c7622e567221f72d5083cf88e0'  ORDER BY "sessions"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered home/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 334ms (Views: 280.0ms | ActiveRecord: 3.4ms)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/assets/group.css?body=1" for 127.0.0.1 at 2014-10-26 23:33:25 +0900
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-10-26 23:33:25 +0900
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-10-26 23:33:25 +0900
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-26 23:33:25 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-26 23:33:25 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-26 23:33:25 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-26 23:33:25 +0900
+
+
+Started GET "/assets/group.js?body=1" for 127.0.0.1 at 2014-10-26 23:33:25 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-26 23:33:25 +0900
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-10-26 23:33:25 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-26 23:33:25 +0900
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2014-10-26 23:33:28 +0900
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"BgBuYDS2TC3lvRhWUVkR593LqpquydZT0G6r3jmg2H0="}
+  [1m[35mActiveRecord::SessionStore::Session Load (0.3ms)[0m  SELECT  "sessions".* FROM "sessions"  WHERE "sessions"."session_id" = '999c50c7622e567221f72d5083cf88e0'  ORDER BY "sessions"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (1.4ms)[0m  [1mDELETE FROM "sessions" WHERE "sessions"."id" = ?[0m  [["id", 10]]
+  [1m[35m (6.8ms)[0m  commit transaction
+  [1m[36mActiveRecord::SessionStore::Session Load (0.3ms)[0m  [1mSELECT  "sessions".* FROM "sessions"  WHERE "sessions"."session_id" = 'bd3cdac0c7f419215d0182aedb80567b'  ORDER BY "sessions"."id" ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 62ms (ActiveRecord: 9.7ms)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.2ms)[0m  [1mINSERT INTO "sessions" ("created_at", "data", "session_id", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", "2014-10-26 14:33:28.897522"], ["data", "BAh7BkkiCmZsYXNoBjoGRVR7B0kiDGRpc2NhcmQGOwBUWwBJIgxmbGFzaGVz\nBjsAVHsGSSILbm90aWNlBjsARkkiHVNpZ25lZCBvdXQgc3VjY2Vzc2Z1bGx5\nLgY7AFQ=\n"], ["session_id", "0fdca77807b5aeeb51eb6a9259695c87"], ["updated_at", "2014-10-26 14:33:28.897522"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-26 23:33:28 +0900
+Processing by HomeController#index as HTML
+  [1m[36mActiveRecord::SessionStore::Session Load (0.4ms)[0m  [1mSELECT  "sessions".* FROM "sessions"  WHERE "sessions"."session_id" = '0fdca77807b5aeeb51eb6a9259695c87'  ORDER BY "sessions"."id" ASC LIMIT 1[0m
+  Rendered home/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 239ms (Views: 209.7ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mUPDATE "sessions" SET "data" = ?, "updated_at" = ? WHERE "sessions"."id" = 11[0m  [["data", "BAh7B0kiCmZsYXNoBjoGRVR7B0kiDGRpc2NhcmQGOwBUWwZJIgtub3RpY2UG\nOwBGSSIMZmxhc2hlcwY7AFR7BkAKSSIdU2lnbmVkIG91dCBzdWNjZXNzZnVs\nbHkuBjsAVEkiEF9jc3JmX3Rva2VuBjsARkkiMVdxanJ4Vk8zVHBrZlhneGhn\ncEpEUVlhcDJpSDJtNXcvcnU1Ylh1S01wVXc9BjsARg==\n"], ["updated_at", "2014-10-26 14:33:29.158869"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-26 23:33:29 +0900
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-10-26 23:33:29 +0900
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-10-26 23:33:29 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-26 23:33:29 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-26 23:33:29 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-26 23:33:29 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-26 23:33:29 +0900
+
+
+Started GET "/assets/group.js?body=1" for 127.0.0.1 at 2014-10-26 23:33:29 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-26 23:33:29 +0900
+
+
+Started GET "/assets/group.css?body=1" for 127.0.0.1 at 2014-10-26 23:33:29 +0900
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-10-26 23:33:29 +0900
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-27 00:23:38 +0900
+Processing by HomeController#index as HTML
+  [1m[36mActiveRecord::SessionStore::Session Load (0.4ms)[0m  [1mSELECT  "sessions".* FROM "sessions"  WHERE "sessions"."session_id" = '0fdca77807b5aeeb51eb6a9259695c87'  ORDER BY "sessions"."id" ASC LIMIT 1[0m
+  Rendered home/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 193ms (Views: 156.4ms | ActiveRecord: 1.4ms)
+  [1m[35m (0.6ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mUPDATE "sessions" SET "data" = ?, "updated_at" = ? WHERE "sessions"."id" = 11[0m  [["data", "BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFXcWpyeFZPM1Rwa2ZYZ3hoZ3BK\nRFFZYXAyaUgybTV3L3J1NWJYdUtNcFV3PQY7AEY=\n"], ["updated_at", "2014-10-26 15:23:38.808706"]]
+  [1m[35m (15.1ms)[0m  commit transaction
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-10-27 00:23:39 +0900
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-27 00:23:39 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-27 00:23:39 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-27 00:23:39 +0900
+
+
+Started GET "/assets/group.js?body=1" for 127.0.0.1 at 2014-10-27 00:23:39 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-27 00:23:39 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-27 00:23:39 +0900
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-10-27 00:23:39 +0900
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-10-27 00:23:39 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-27 00:23:39 +0900
+
+
+Started GET "/assets/group.css?body=1" for 127.0.0.1 at 2014-10-27 00:23:39 +0900
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-10-27 00:23:41 +0900
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mActiveRecord::SessionStore::Session Load (0.4ms)[0m  [1mSELECT  "sessions".* FROM "sessions"  WHERE "sessions"."session_id" = '0fdca77807b5aeeb51eb6a9259695c87'  ORDER BY "sessions"."id" ASC LIMIT 1[0m
+  Rendered devise/shared/_links.html.erb (20.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (64.0ms)
+Completed 200 OK in 268ms (Views: 239.6ms | ActiveRecord: 1.1ms)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2014-10-27 00:23:45 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[35mActiveRecord::SessionStore::Session Load (0.3ms)[0m  SELECT  "sessions".* FROM "sessions"  WHERE "sessions"."session_id" = '0fdca77807b5aeeb51eb6a9259695c87'  ORDER BY "sessions"."id" ASC LIMIT 1
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 165ms (Views: 160.5ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+
+
+Started POST "/users" for 127.0.0.1 at 2014-10-27 00:23:58 +0900
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WqjrxVO3TpkfXgxhgpJDQYap2iH2m5w/ru5bXuKMpUw=", "user"=>{"username"=>"コマさん", "email"=>"komasan@youkai.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mActiveRecord::SessionStore::Session Load (0.3ms)[0m  [1mSELECT  "sessions".* FROM "sessions"  WHERE "sessions"."session_id" = '0fdca77807b5aeeb51eb6a9259695c87'  ORDER BY "sessions"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'komasan@youkai.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at", "username") VALUES (?, ?, ?, ?, ?)  [["created_at", "2014-10-26 15:23:58.999801"], ["email", "komasan@youkai.com"], ["encrypted_password", "$2a$10$IyQPMVwGQVlZNqSjzkMZFOIEcPdS63z2NTnZBltmeNN1CqoOGrpPy"], ["updated_at", "2014-10-26 15:23:58.999801"], ["username", "コマさん"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Binary data inserted for `string` type on column `current_sign_in_ip`
+Binary data inserted for `string` type on column `last_sign_in_ip`
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE "users" SET "current_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_at" = ?, "last_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = 5[0m  [["current_sign_in_at", "2014-10-26 15:23:59.006459"], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_at", "2014-10-26 15:23:59.006459"], ["last_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", "2014-10-26 15:23:59.008940"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 217ms (ActiveRecord: 4.6ms)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  DELETE FROM "sessions" WHERE "sessions"."id" = ?  [["id", 11]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SessionStore::Session Load (0.3ms)[0m  SELECT  "sessions".* FROM "sessions"  WHERE "sessions"."session_id" = '8ced996fe4a99884476fd6d30ee3a5e6'  ORDER BY "sessions"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "sessions" ("created_at", "data", "session_id", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2014-10-26 15:23:59.032328"], ["data", "BAh7CEkiEF9jc3JmX3Rva2VuBjoGRUZJIjFXcWpyeFZPM1Rwa2ZYZ3hoZ3BK\nRFFZYXAyaUgybTV3L3J1NWJYdUtNcFV3PQY7AEZJIhl3YXJkZW4udXNlci51\nc2VyLmtleQY7AFRbB1sGaQoiIiQyYSQxMCRJeVFQTVZ3R1FWbFpOcVNqemtN\nWkZPSSIKZmxhc2gGOwBUewdJIgxkaXNjYXJkBjsAVFsASSIMZmxhc2hlcwY7\nAFR7BkkiC25vdGljZQY7AEZJIi5XZWxjb21lISBZb3UgaGF2ZSBzaWduZWQg\ndXAgc3VjY2Vzc2Z1bGx5LgY7AFQ=\n"], ["session_id", "8ced996fe4a99884476fd6d30ee3a5e6"], ["updated_at", "2014-10-26 15:23:59.032328"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-27 00:23:59 +0900
+Processing by HomeController#index as HTML
+  [1m[35mActiveRecord::SessionStore::Session Load (0.3ms)[0m  SELECT  "sessions".* FROM "sessions"  WHERE "sessions"."session_id" = '8ced996fe4a99884476fd6d30ee3a5e6'  ORDER BY "sessions"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 5  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered home/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 159ms (Views: 153.8ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mUPDATE "sessions" SET "data" = ?, "updated_at" = ? WHERE "sessions"."id" = 12[0m  [["data", "BAh7CEkiEF9jc3JmX3Rva2VuBjoGRUZJIjFXcWpyeFZPM1Rwa2ZYZ3hoZ3BK\nRFFZYXAyaUgybTV3L3J1NWJYdUtNcFV3PQY7AEZJIhl3YXJkZW4udXNlci51\nc2VyLmtleQY7AFRbB1sGaQoiIiQyYSQxMCRJeVFQTVZ3R1FWbFpOcVNqemtN\nWkZPSSIKZmxhc2gGOwBUewdJIgxkaXNjYXJkBjsAVFsGSSILbm90aWNlBjsA\nRkkiDGZsYXNoZXMGOwBUewZAEEkiLldlbGNvbWUhIFlvdSBoYXZlIHNpZ25l\nZCB1cCBzdWNjZXNzZnVsbHkuBjsAVA==\n"], ["updated_at", "2014-10-26 15:23:59.212971"]]
+  [1m[35m (3.1ms)[0m  commit transaction
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-27 00:23:59 +0900
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-10-27 00:23:59 +0900
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-27 00:23:59 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-27 00:23:59 +0900
+
+
+Started GET "/assets/group.js?body=1" for 127.0.0.1 at 2014-10-27 00:23:59 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-27 00:23:59 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-27 00:23:59 +0900
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-10-27 00:23:59 +0900
+
+
+Started GET "/assets/group.css?body=1" for 127.0.0.1 at 2014-10-27 00:23:59 +0900
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-10-27 00:23:59 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-27 00:23:59 +0900
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2014-10-27 00:24:03 +0900
+Processing by GroupsController#new as HTML
+  [1m[36mActiveRecord::SessionStore::Session Load (2.2ms)[0m  [1mSELECT  "sessions".* FROM "sessions"  WHERE "sessions"."session_id" = '8ced996fe4a99884476fd6d30ee3a5e6'  ORDER BY "sessions"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users"
+  Rendered groups/new.html.erb within layouts/application (6.6ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 5  ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 200 OK in 168ms (Views: 161.7ms | ActiveRecord: 3.0ms)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE "sessions" SET "data" = ?, "updated_at" = ? WHERE "sessions"."id" = 12[0m  [["data", "BAh7B0kiEF9jc3JmX3Rva2VuBjoGRUZJIjFXcWpyeFZPM1Rwa2ZYZ3hoZ3BK\nRFFZYXAyaUgybTV3L3J1NWJYdUtNcFV3PQY7AEZJIhl3YXJkZW4udXNlci51\nc2VyLmtleQY7AFRbB1sGaQoiIiQyYSQxMCRJeVFQTVZ3R1FWbFpOcVNqemtN\nWkZP\n"], ["updated_at", "2014-10-26 15:24:03.429985"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+
+
+Started GET "/groups" for 127.0.0.1 at 2014-10-27 00:24:03 +0900
+Processing by GroupsController#index as HTML
+  [1m[36mActiveRecord::SessionStore::Session Load (0.7ms)[0m  [1mSELECT  "sessions".* FROM "sessions"  WHERE "sessions"."session_id" = '8ced996fe4a99884476fd6d30ee3a5e6'  ORDER BY "sessions"."id" ASC LIMIT 1[0m
+  [1m[35mGroup Load (0.3ms)[0m  SELECT "groups".* FROM "groups"
+  Rendered groups/index.html.erb within layouts/application (30.2ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 5  ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 200 OK in 177ms (Views: 162.9ms | ActiveRecord: 1.9ms)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/assets/group.css?body=1" for 127.0.0.1 at 2014-10-27 00:24:03 +0900
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-10-27 00:24:03 +0900
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-10-27 00:24:03 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-27 00:24:03 +0900
+
+
+Started GET "/assets/group.js?body=1" for 127.0.0.1 at 2014-10-27 00:24:03 +0900
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-27 00:24:03 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-27 00:24:03 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-27 00:24:03 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-27 00:24:03 +0900
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-10-27 00:24:03 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-27 00:24:04 +0900
+
+
+Started GET "/assets/group.css?body=1" for 127.0.0.1 at 2014-10-27 00:24:04 +0900
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-10-27 00:24:04 +0900
+
+
+Started GET "/assets/group.js?body=1" for 127.0.0.1 at 2014-10-27 00:24:04 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-27 00:24:04 +0900
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-10-27 00:24:04 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-27 00:24:04 +0900
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-10-27 00:24:04 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-27 00:24:04 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-27 00:24:04 +0900
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-27 00:24:04 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-27 00:24:04 +0900
+
+
+Started GET "/groups" for 127.0.0.1 at 2014-10-27 00:24:54 +0900
+Processing by GroupsController#index as HTML
+  [1m[35mActiveRecord::SessionStore::Session Load (0.3ms)[0m  SELECT  "sessions".* FROM "sessions"  WHERE "sessions"."session_id" = '8ced996fe4a99884476fd6d30ee3a5e6'  ORDER BY "sessions"."id" ASC LIMIT 1
+  [1m[36mGroup Load (6.7ms)[0m  [1mSELECT "groups".* FROM "groups"[0m
+  Rendered groups/index.html.erb within layouts/application (10.0ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 5  ORDER BY "users"."id" ASC LIMIT 1
+Completed 200 OK in 193ms (Views: 182.8ms | ActiveRecord: 7.3ms)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-10-27 00:24:55 +0900
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-10-27 00:24:55 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-27 00:24:55 +0900
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-27 00:24:55 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-27 00:24:55 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-27 00:24:55 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-27 00:24:55 +0900
+
+
+Started GET "/assets/group.js?body=1" for 127.0.0.1 at 2014-10-27 00:24:55 +0900
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-10-27 00:24:55 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-27 00:24:55 +0900
+
+
+Started GET "/assets/group.css?body=1" for 127.0.0.1 at 2014-10-27 00:24:55 +0900
+
+
+Started GET "/groups" for 127.0.0.1 at 2014-10-27 00:24:57 +0900
+Processing by GroupsController#index as HTML
+  [1m[36mActiveRecord::SessionStore::Session Load (0.3ms)[0m  [1mSELECT  "sessions".* FROM "sessions"  WHERE "sessions"."session_id" = '8ced996fe4a99884476fd6d30ee3a5e6'  ORDER BY "sessions"."id" ASC LIMIT 1[0m
+  [1m[35mGroup Load (0.3ms)[0m  SELECT "groups".* FROM "groups"
+  Rendered groups/index.html.erb within layouts/application (3.2ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 5  ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 200 OK in 158ms (Views: 154.5ms | ActiveRecord: 1.0ms)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/groups" for 127.0.0.1 at 2014-10-27 00:24:58 +0900
+Processing by GroupsController#index as HTML
+  [1m[35mActiveRecord::SessionStore::Session Load (0.3ms)[0m  SELECT  "sessions".* FROM "sessions"  WHERE "sessions"."session_id" = '8ced996fe4a99884476fd6d30ee3a5e6'  ORDER BY "sessions"."id" ASC LIMIT 1
+  [1m[36mGroup Load (0.3ms)[0m  [1mSELECT "groups".* FROM "groups"[0m
+  Rendered groups/index.html.erb within layouts/application (2.6ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 5  ORDER BY "users"."id" ASC LIMIT 1
+Completed 200 OK in 170ms (Views: 165.5ms | ActiveRecord: 0.9ms)
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  commit transaction
+
+
+Started GET "/users" for 127.0.0.1 at 2014-10-27 00:24:59 +0900
+Processing by UsersController#index as HTML
+  [1m[36mActiveRecord::SessionStore::Session Load (0.3ms)[0m  [1mSELECT  "sessions".* FROM "sessions"  WHERE "sessions"."session_id" = '8ced996fe4a99884476fd6d30ee3a5e6'  ORDER BY "sessions"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (3.2ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (9.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 5  ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 200 OK in 169ms (Views: 162.9ms | ActiveRecord: 3.8ms)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/groups" for 127.0.0.1 at 2014-10-27 00:25:00 +0900
+Processing by GroupsController#index as HTML
+  [1m[35mActiveRecord::SessionStore::Session Load (0.3ms)[0m  SELECT  "sessions".* FROM "sessions"  WHERE "sessions"."session_id" = '8ced996fe4a99884476fd6d30ee3a5e6'  ORDER BY "sessions"."id" ASC LIMIT 1
+  [1m[36mGroup Load (0.5ms)[0m  [1mSELECT "groups".* FROM "groups"[0m
+  Rendered groups/index.html.erb within layouts/application (1.6ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 5  ORDER BY "users"."id" ASC LIMIT 1
+Completed 200 OK in 149ms (Views: 145.6ms | ActiveRecord: 1.1ms)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
