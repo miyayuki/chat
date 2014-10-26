@@ -21,14 +21,6 @@ class GroupsController < ApplicationController
     @group_master.userID = current_user.id
     @group_master.save
 
-=begin
-    @group = Group.new(group_params)
-		if @group.save
-			#redirect_to groups_url
-		else
-			render 'new'
-		end
-=end
 	end
 
 	def index
@@ -41,7 +33,4 @@ class GroupsController < ApplicationController
   end
 
 	private
-	def group_params
-		params.require(:group).permit(:name)
-	end
 end
