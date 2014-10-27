@@ -4,7 +4,7 @@
 <ul class="groups">
 	<% @groups.each do |g| %>
 		<li>
-			Group ID : <%= g.id %>
+			<%= link_to("Group ID : "+g.id.to_s, :controller => :groups, :action => :show, :id => g.id) %>
 			<br>
 			Group Name : <%= g.name %>
 			<ul>
