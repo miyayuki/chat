@@ -16631,3 +16631,60 @@ Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-27 23:52:30
 
 
 Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-27 23:52:30 +0900
+
+
+Started GET "/groups/1" for 127.0.0.1 at 2014-10-27 23:55:17 +0900
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mActiveRecord::SessionStore::Session Load (0.5ms)[0m  [1mSELECT  "sessions".* FROM "sessions"  WHERE "sessions"."session_id" = '5a32b6475ca9889dd3fe9ff14d0f73fe'  ORDER BY "sessions"."id" ASC LIMIT 1[0m
+  [1m[35mGroup Load (0.2ms)[0m  SELECT  "groups".* FROM "groups"  WHERE "groups"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered groups/show.html.erb within layouts/application (0.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 200 OK in 169ms (Views: 162.9ms | ActiveRecord: 1.0ms)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/groups/3" for 127.0.0.1 at 2014-10-27 23:56:18 +0900
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mActiveRecord::SessionStore::Session Load (1.4ms)[0m  SELECT  "sessions".* FROM "sessions"  WHERE "sessions"."session_id" = '5a32b6475ca9889dd3fe9ff14d0f73fe'  ORDER BY "sessions"."id" ASC LIMIT 1
+  [1m[36mGroup Load (0.2ms)[0m  [1mSELECT  "groups".* FROM "groups"  WHERE "groups"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered groups/show.html.erb within layouts/application (0.2ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1
+Completed 200 OK in 166ms (Views: 160.1ms | ActiveRecord: 2.0ms)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-27 23:56:18 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-27 23:56:18 +0900
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-10-27 23:56:18 +0900
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-10-27 23:56:18 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-27 23:56:19 +0900
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-27 23:56:19 +0900
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-10-27 23:56:19 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-27 23:56:19 +0900
+
+
+Started GET "/assets/group.js?body=1" for 127.0.0.1 at 2014-10-27 23:56:19 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-27 23:56:19 +0900
+
+
+Started GET "/assets/group.css?body=1" for 127.0.0.1 at 2014-10-27 23:56:19 +0900
