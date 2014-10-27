@@ -7,6 +7,12 @@
 			Group ID : <%= g.id %>
 			<br>
 			Group Name : <%= g.name %>
+			<ul>
+				<% g.group_subscriptions.each do |subscription| %>
+					<li><%= subscription.user.username %></li>
+				<% end %>
+				
+			</ul>
 		</li>
 	<% end %>
 </ul>

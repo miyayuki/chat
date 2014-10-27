@@ -3,6 +3,7 @@
 <ul class="users">
   <%= form_tag :action => :create do %>
     <% @users.each do |user| %>
+			<%- next if user.id == current_user.id %>
 		  <li>
         <%= check_box_tag "group_users[]", user.id, false %>
         <%= user.username %>

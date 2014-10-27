@@ -8,6 +8,11 @@ class GroupsController < ApplicationController
     @group.save
     p @group
 
+    @group_subscription = GroupSubscription.new
+    @group_subscription.groupID = @group.id
+    @group_subscription.userID = current_user.id
+    @group_subscription.save
+
     for id in params[:group_users] do
       p id
       @group_subscription = GroupSubscription.new
@@ -32,5 +37,8 @@ class GroupsController < ApplicationController
 		@users = User.all
   end
 
+	def show
+		@group = Group.find(params[:id])
+	end
 	private
 end
