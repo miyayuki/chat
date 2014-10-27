@@ -24,7 +24,12 @@ class GroupsController < ApplicationController
 		@group_master.groupID = @group.id
 		@group_master.userID = current_user.id
 		@group_master.save
+	end
 
+	def destroy
+		Group.find(params[:id]).destroy
+		flash[:success] = "Your group is deleted"
+		redirect_to root_url
 	end
 
 	def index

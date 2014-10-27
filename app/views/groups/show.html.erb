@@ -5,3 +5,5 @@
 <h2>
 <%= @group.id %>
 </h2>
+
+<%= link_to "delete", @group, method: :delete,data: { confirm: "You sure?" } %>
