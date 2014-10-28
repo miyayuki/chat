@@ -6,6 +6,9 @@
 <%= @group.id %>
 </h2>
 
-<% if current_user.master(@group.id) == true%>
-	<%= link_to "delete", @group, method: :delete,data: { confirm: "You sure?" } %>
+このグループの管理者は
+<%= @gid.user.username %>
+です
+<% if current_user.id == @gid.user.id %>
+	<%= link_to "グループ消去", @group, method: :delete,data: { confirm: "You sure?" } %>
 <% end %>

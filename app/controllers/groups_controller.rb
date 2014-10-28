@@ -1,7 +1,6 @@
 class GroupsController < ApplicationController
 
 	def create
-    p params
 
 		@group = Group.new
 		@group.name = params[:group][:name]
@@ -43,6 +42,7 @@ class GroupsController < ApplicationController
 
 	def show
 		@group = Group.find(params[:id])
+		@gid = @group.group_masters.find(@group.id)
 	end
 	private
 end
