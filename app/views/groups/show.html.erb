@@ -10,5 +10,8 @@
 <%= @gid.user.username %>
 です
 <% if current_user.id == @gid.user.id %>
+	<br>
 	<%= link_to "グループ消去", @group, method: :delete,data: { confirm: "You sure?" } %>
+	<br>
+	<%= link_to("グループ編集", :controller => :groups, :action => :edit ) %>
 <% end %>

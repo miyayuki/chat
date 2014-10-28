@@ -20345,3 +20345,817 @@ Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-10-29 00:23:13 +0900
 
 
 Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-29 00:23:13 +0900
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-29 00:27:49 +0900
+Processing by HomeController#index as HTML
+  [1m[36mActiveRecord::SessionStore::Session Load (0.2ms)[0m  [1mSELECT  "sessions".* FROM "sessions"  WHERE "sessions"."session_id" = 'dceadab35564e74e208e2c65940a9c5c'  ORDER BY "sessions"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 5  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered home/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 188ms (Views: 158.4ms | ActiveRecord: 2.7ms)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+
+
+Started GET "/assets/group.css?body=1" for 127.0.0.1 at 2014-10-29 00:27:50 +0900
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-10-29 00:27:50 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-29 00:27:50 +0900
+
+
+Started GET "/assets/group.js?body=1" for 127.0.0.1 at 2014-10-29 00:27:50 +0900
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-10-29 00:27:50 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-29 00:27:50 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-29 00:27:50 +0900
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-10-29 00:27:50 +0900
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-29 00:27:50 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-29 00:27:50 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-29 00:27:50 +0900
+
+
+Started GET "/groups" for 127.0.0.1 at 2014-10-29 00:27:51 +0900
+Processing by GroupsController#index as HTML
+  [1m[36mActiveRecord::SessionStore::Session Load (0.4ms)[0m  [1mSELECT  "sessions".* FROM "sessions"  WHERE "sessions"."session_id" = 'dceadab35564e74e208e2c65940a9c5c'  ORDER BY "sessions"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 5  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mGroup Load (0.3ms)[0m  [1mSELECT "groups".* FROM "groups"[0m
+  [1m[35mGroupSubscription Load (0.5ms)[0m  SELECT "group_subscriptions".* FROM "group_subscriptions"  WHERE "group_subscriptions"."groupID" = ?  [["groupID", 2]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mGroupSubscription Load (0.2ms)[0m  [1mSELECT "group_subscriptions".* FROM "group_subscriptions"  WHERE "group_subscriptions"."groupID" = ?[0m  [["groupID", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mGroupSubscription Load (0.2ms)[0m  [1mSELECT "group_subscriptions".* FROM "group_subscriptions"  WHERE "group_subscriptions"."groupID" = ?[0m  [["groupID", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered groups/index.html.erb within layouts/application (53.3ms)
+Completed 200 OK in 214ms (Views: 199.2ms | ActiveRecord: 4.5ms)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/groups/5" for 127.0.0.1 at 2014-10-29 00:27:54 +0900
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mActiveRecord::SessionStore::Session Load (0.3ms)[0m  SELECT  "sessions".* FROM "sessions"  WHERE "sessions"."session_id" = 'dceadab35564e74e208e2c65940a9c5c'  ORDER BY "sessions"."id" ASC LIMIT 1
+  [1m[36mGroup Load (0.3ms)[0m  [1mSELECT  "groups".* FROM "groups"  WHERE "groups"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mGroupMaster Load (0.3ms)[0m  SELECT  "group_masters".* FROM "group_masters"  WHERE "group_masters"."groupID" = ? AND "group_masters"."id" = ? LIMIT 1  [["groupID", 5], ["id", 5]]
+  Rendered groups/show.html.erb within layouts/application (1.9ms)
+Completed 500 Internal Server Error in 28ms
+
+SyntaxError (/Users/mitsuba/sandbox/app/views/groups/show.html.erb:18: syntax error, unexpected '<', expecting keyword_end
+<% end 
+ ^
+/Users/mitsuba/sandbox/app/views/groups/show.html.erb:20: syntax error, unexpected keyword_ensure, expecting keyword_end
+/Users/mitsuba/sandbox/app/views/groups/show.html.erb:22: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/views/groups/show.html.erb:18: syntax error, unexpected '<', expecting keyword_end
+  app/views/groups/show.html.erb:20: syntax error, unexpected keyword_ensure, expecting keyword_end
+  app/views/groups/show.html.erb:22: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /Users/mitsuba/.rvm/gems/ruby-2.1.3@global/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.8ms)
+  Rendered /Users/mitsuba/.rvm/gems/ruby-2.1.3@global/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /Users/mitsuba/.rvm/gems/ruby-2.1.3@global/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /Users/mitsuba/.rvm/gems/ruby-2.1.3@global/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (46.4ms)
+
+
+Started GET "/groups/5" for 127.0.0.1 at 2014-10-29 00:27:54 +0900
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mActiveRecord::SessionStore::Session Load (0.3ms)[0m  [1mSELECT  "sessions".* FROM "sessions"  WHERE "sessions"."session_id" = 'dceadab35564e74e208e2c65940a9c5c'  ORDER BY "sessions"."id" ASC LIMIT 1[0m
+  [1m[35mGroup Load (0.2ms)[0m  SELECT  "groups".* FROM "groups"  WHERE "groups"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mGroupMaster Load (0.2ms)[0m  [1mSELECT  "group_masters".* FROM "group_masters"  WHERE "group_masters"."groupID" = ? AND "group_masters"."id" = ? LIMIT 1[0m  [["groupID", 5], ["id", 5]]
+  Rendered groups/show.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 12ms
+
+SyntaxError (/Users/mitsuba/sandbox/app/views/groups/show.html.erb:18: syntax error, unexpected '<', expecting keyword_end
+<% end 
+ ^
+/Users/mitsuba/sandbox/app/views/groups/show.html.erb:20: syntax error, unexpected keyword_ensure, expecting keyword_end
+/Users/mitsuba/sandbox/app/views/groups/show.html.erb:22: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/views/groups/show.html.erb:18: syntax error, unexpected '<', expecting keyword_end
+  app/views/groups/show.html.erb:20: syntax error, unexpected keyword_ensure, expecting keyword_end
+  app/views/groups/show.html.erb:22: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /Users/mitsuba/.rvm/gems/ruby-2.1.3@global/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.7ms)
+  Rendered /Users/mitsuba/.rvm/gems/ruby-2.1.3@global/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /Users/mitsuba/.rvm/gems/ruby-2.1.3@global/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.5ms)
+  Rendered /Users/mitsuba/.rvm/gems/ruby-2.1.3@global/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (42.2ms)
+
+
+Started GET "/groups/5" for 127.0.0.1 at 2014-10-29 00:28:04 +0900
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mActiveRecord::SessionStore::Session Load (0.3ms)[0m  SELECT  "sessions".* FROM "sessions"  WHERE "sessions"."session_id" = 'dceadab35564e74e208e2c65940a9c5c'  ORDER BY "sessions"."id" ASC LIMIT 1
+  [1m[36mGroup Load (0.2ms)[0m  [1mSELECT  "groups".* FROM "groups"  WHERE "groups"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mGroupMaster Load (0.2ms)[0m  SELECT  "group_masters".* FROM "group_masters"  WHERE "group_masters"."groupID" = ? AND "group_masters"."id" = ? LIMIT 1  [["groupID", 5], ["id", 5]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mUser Load (3.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 5  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered groups/show.html.erb within layouts/application (34.6ms)
+Completed 200 OK in 197ms (Views: 181.3ms | ActiveRecord: 4.2ms)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+
+
+Started GET "/assets/group.css?body=1" for 127.0.0.1 at 2014-10-29 00:28:05 +0900
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-10-29 00:28:05 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-29 00:28:05 +0900
+
+
+Started GET "/assets/group.js?body=1" for 127.0.0.1 at 2014-10-29 00:28:05 +0900
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-29 00:28:05 +0900
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-10-29 00:28:05 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-29 00:28:05 +0900
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-10-29 00:28:05 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-29 00:28:05 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-29 00:28:05 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-29 00:28:05 +0900
+
+
+Started POST "/groups/5" for 127.0.0.1 at 2014-10-29 00:28:07 +0900
+
+ActionController::RoutingError (No route matches [POST] "/groups/5"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/mitsuba/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/mitsuba/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/mitsuba/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/mitsuba/.rvm/gems/ruby-2.1.3@global/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/mitsuba/.rvm/gems/ruby-2.1.3@global/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (8.5ms)
+  Rendered /Users/mitsuba/.rvm/gems/ruby-2.1.3@global/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (6.6ms)
+  Rendered /Users/mitsuba/.rvm/gems/ruby-2.1.3@global/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (90.9ms)
+
+
+Started POST "/groups/5" for 127.0.0.1 at 2014-10-29 00:28:38 +0900
+
+ActionController::RoutingError (No route matches [POST] "/groups/5"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/mitsuba/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/mitsuba/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/mitsuba/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/mitsuba/.rvm/gems/ruby-2.1.3@global/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /Users/mitsuba/.rvm/gems/ruby-2.1.3@global/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (7.9ms)
+  Rendered /Users/mitsuba/.rvm/gems/ruby-2.1.3@global/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.1ms)
+  Rendered /Users/mitsuba/.rvm/gems/ruby-2.1.3@global/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (81.0ms)
+
+
+Started POST "/groups/5" for 127.0.0.1 at 2014-10-29 00:28:43 +0900
+
+ActionController::RoutingError (No route matches [POST] "/groups/5"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/mitsuba/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/mitsuba/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/mitsuba/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/mitsuba/.rvm/gems/ruby-2.1.3@global/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /Users/mitsuba/.rvm/gems/ruby-2.1.3@global/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (11.3ms)
+  Rendered /Users/mitsuba/.rvm/gems/ruby-2.1.3@global/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.3ms)
+  Rendered /Users/mitsuba/.rvm/gems/ruby-2.1.3@global/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (82.5ms)
+
+
+Started POST "/groups/5" for 127.0.0.1 at 2014-10-29 00:28:58 +0900
+
+ActionController::RoutingError (No route matches [POST] "/groups/5"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/mitsuba/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/mitsuba/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/mitsuba/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/mitsuba/.rvm/gems/ruby-2.1.3@global/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /Users/mitsuba/.rvm/gems/ruby-2.1.3@global/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (7.8ms)
+  Rendered /Users/mitsuba/.rvm/gems/ruby-2.1.3@global/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.6ms)
+  Rendered /Users/mitsuba/.rvm/gems/ruby-2.1.3@global/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (92.2ms)
+
+
+Started POST "/groups/5" for 127.0.0.1 at 2014-10-29 00:29:05 +0900
+
+ActionController::RoutingError (No route matches [POST] "/groups/5"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/mitsuba/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/mitsuba/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/mitsuba/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/mitsuba/.rvm/gems/ruby-2.1.3@global/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /Users/mitsuba/.rvm/gems/ruby-2.1.3@global/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (10.0ms)
+  Rendered /Users/mitsuba/.rvm/gems/ruby-2.1.3@global/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (4.3ms)
+  Rendered /Users/mitsuba/.rvm/gems/ruby-2.1.3@global/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (82.7ms)
+
+
+Started GET "/groups/edit" for 127.0.0.1 at 2014-10-29 00:29:22 +0900
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"edit"}
+  [1m[36mActiveRecord::SessionStore::Session Load (0.3ms)[0m  [1mSELECT  "sessions".* FROM "sessions"  WHERE "sessions"."session_id" = 'dceadab35564e74e208e2c65940a9c5c'  ORDER BY "sessions"."id" ASC LIMIT 1[0m
+  [1m[35mGroup Load (0.1ms)[0m  SELECT  "groups".* FROM "groups"  WHERE "groups"."id" = ? LIMIT 1  [["id", 0]]
+Completed 404 Not Found in 4ms
+
+ActiveRecord::RecordNotFound (Couldn't find Group with 'id'=edit):
+  app/controllers/groups_controller.rb:44:in `show'
+
+
+  Rendered /Users/mitsuba/.rvm/gems/ruby-2.1.3@global/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.4ms)
+  Rendered /Users/mitsuba/.rvm/gems/ruby-2.1.3@global/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendered /Users/mitsuba/.rvm/gems/ruby-2.1.3@global/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /Users/mitsuba/.rvm/gems/ruby-2.1.3@global/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (42.3ms)
+
+
+Started GET "/groups/edit" for 127.0.0.1 at 2014-10-29 00:29:58 +0900
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"edit"}
+  [1m[36mActiveRecord::SessionStore::Session Load (0.2ms)[0m  [1mSELECT  "sessions".* FROM "sessions"  WHERE "sessions"."session_id" = 'dceadab35564e74e208e2c65940a9c5c'  ORDER BY "sessions"."id" ASC LIMIT 1[0m
+  [1m[35mGroup Load (0.3ms)[0m  SELECT  "groups".* FROM "groups"  WHERE "groups"."id" = ? LIMIT 1  [["id", 0]]
+Completed 404 Not Found in 22ms
+
+ActiveRecord::RecordNotFound (Couldn't find Group with 'id'=edit):
+  app/controllers/groups_controller.rb:47:in `show'
+
+
+  Rendered /Users/mitsuba/.rvm/gems/ruby-2.1.3@global/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.4ms)
+  Rendered /Users/mitsuba/.rvm/gems/ruby-2.1.3@global/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /Users/mitsuba/.rvm/gems/ruby-2.1.3@global/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /Users/mitsuba/.rvm/gems/ruby-2.1.3@global/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (41.1ms)
+
+
+Started GET "/groups/edit" for 127.0.0.1 at 2014-10-29 00:29:59 +0900
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"edit"}
+  [1m[36mActiveRecord::SessionStore::Session Load (0.3ms)[0m  [1mSELECT  "sessions".* FROM "sessions"  WHERE "sessions"."session_id" = 'dceadab35564e74e208e2c65940a9c5c'  ORDER BY "sessions"."id" ASC LIMIT 1[0m
+  [1m[35mGroup Load (0.1ms)[0m  SELECT  "groups".* FROM "groups"  WHERE "groups"."id" = ? LIMIT 1  [["id", 0]]
+Completed 404 Not Found in 5ms
+
+ActiveRecord::RecordNotFound (Couldn't find Group with 'id'=edit):
+  app/controllers/groups_controller.rb:47:in `show'
+
+
+  Rendered /Users/mitsuba/.rvm/gems/ruby-2.1.3@global/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.5ms)
+  Rendered /Users/mitsuba/.rvm/gems/ruby-2.1.3@global/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /Users/mitsuba/.rvm/gems/ruby-2.1.3@global/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /Users/mitsuba/.rvm/gems/ruby-2.1.3@global/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (42.4ms)
+
+
+Started GET "/groups/edit" for 127.0.0.1 at 2014-10-29 00:32:43 +0900
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"edit"}
+  [1m[36mActiveRecord::SessionStore::Session Load (0.5ms)[0m  [1mSELECT  "sessions".* FROM "sessions"  WHERE "sessions"."session_id" = 'dceadab35564e74e208e2c65940a9c5c'  ORDER BY "sessions"."id" ASC LIMIT 1[0m
+  [1m[35mGroup Load (0.2ms)[0m  SELECT  "groups".* FROM "groups"  WHERE "groups"."id" = ? LIMIT 1  [["id", 0]]
+Completed 404 Not Found in 6ms
+
+ActiveRecord::RecordNotFound (Couldn't find Group with 'id'=edit):
+  app/controllers/groups_controller.rb:47:in `show'
+
+
+  Rendered /Users/mitsuba/.rvm/gems/ruby-2.1.3@global/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.1ms)
+  Rendered /Users/mitsuba/.rvm/gems/ruby-2.1.3@global/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.6ms)
+  Rendered /Users/mitsuba/.rvm/gems/ruby-2.1.3@global/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.8ms)
+  Rendered /Users/mitsuba/.rvm/gems/ruby-2.1.3@global/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (49.5ms)
+
+
+Started GET "/groups/edit" for 127.0.0.1 at 2014-10-29 00:32:44 +0900
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"edit"}
+  [1m[36mActiveRecord::SessionStore::Session Load (0.4ms)[0m  [1mSELECT  "sessions".* FROM "sessions"  WHERE "sessions"."session_id" = 'dceadab35564e74e208e2c65940a9c5c'  ORDER BY "sessions"."id" ASC LIMIT 1[0m
+  [1m[35mGroup Load (0.1ms)[0m  SELECT  "groups".* FROM "groups"  WHERE "groups"."id" = ? LIMIT 1  [["id", 0]]
+Completed 404 Not Found in 4ms
+
+ActiveRecord::RecordNotFound (Couldn't find Group with 'id'=edit):
+  app/controllers/groups_controller.rb:47:in `show'
+
+
+  Rendered /Users/mitsuba/.rvm/gems/ruby-2.1.3@global/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.7ms)
+  Rendered /Users/mitsuba/.rvm/gems/ruby-2.1.3@global/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /Users/mitsuba/.rvm/gems/ruby-2.1.3@global/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.3ms)
+  Rendered /Users/mitsuba/.rvm/gems/ruby-2.1.3@global/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (42.2ms)
+
+
+Started GET "/groups/" for 127.0.0.1 at 2014-10-29 00:32:51 +0900
+Processing by GroupsController#index as HTML
+  [1m[36mActiveRecord::SessionStore::Session Load (0.3ms)[0m  [1mSELECT  "sessions".* FROM "sessions"  WHERE "sessions"."session_id" = 'dceadab35564e74e208e2c65940a9c5c'  ORDER BY "sessions"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 5  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mGroup Load (0.3ms)[0m  [1mSELECT "groups".* FROM "groups"[0m
+  [1m[35mGroupSubscription Load (0.3ms)[0m  SELECT "group_subscriptions".* FROM "group_subscriptions"  WHERE "group_subscriptions"."groupID" = ?  [["groupID", 2]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mGroupSubscription Load (0.2ms)[0m  [1mSELECT "group_subscriptions".* FROM "group_subscriptions"  WHERE "group_subscriptions"."groupID" = ?[0m  [["groupID", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mGroupSubscription Load (0.2ms)[0m  [1mSELECT "group_subscriptions".* FROM "group_subscriptions"  WHERE "group_subscriptions"."groupID" = ?[0m  [["groupID", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered groups/index.html.erb within layouts/application (102.3ms)
+Completed 200 OK in 256ms (Views: 248.1ms | ActiveRecord: 5.1ms)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-10-29 00:32:52 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-29 00:32:52 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-29 00:32:52 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-29 00:32:52 +0900
+
+
+Started GET "/assets/group.js?body=1" for 127.0.0.1 at 2014-10-29 00:32:52 +0900
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-10-29 00:32:52 +0900
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-29 00:32:52 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-29 00:32:52 +0900
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-10-29 00:32:52 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-29 00:32:52 +0900
+
+
+Started GET "/assets/group.css?body=1" for 127.0.0.1 at 2014-10-29 00:32:52 +0900
+
+
+Started GET "/groups/5" for 127.0.0.1 at 2014-10-29 00:32:53 +0900
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mActiveRecord::SessionStore::Session Load (0.3ms)[0m  SELECT  "sessions".* FROM "sessions"  WHERE "sessions"."session_id" = 'dceadab35564e74e208e2c65940a9c5c'  ORDER BY "sessions"."id" ASC LIMIT 1
+  [1m[36mGroup Load (0.2ms)[0m  [1mSELECT  "groups".* FROM "groups"  WHERE "groups"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mGroupMaster Load (0.3ms)[0m  SELECT  "group_masters".* FROM "group_masters"  WHERE "group_masters"."groupID" = ? AND "group_masters"."id" = ? LIMIT 1  [["groupID", 5], ["id", 5]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 5  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered groups/show.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 187ms (Views: 161.2ms | ActiveRecord: 2.2ms)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+
+
+Started GET "/groups/5/edit" for 127.0.0.1 at 2014-10-29 00:32:55 +0900
+Processing by GroupsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mActiveRecord::SessionStore::Session Load (0.3ms)[0m  [1mSELECT  "sessions".* FROM "sessions"  WHERE "sessions"."session_id" = 'dceadab35564e74e208e2c65940a9c5c'  ORDER BY "sessions"."id" ASC LIMIT 1[0m
+  Rendered groups/edit.html.erb within layouts/application (0.8ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 5  ORDER BY "users"."id" ASC LIMIT 1
+Completed 200 OK in 162ms (Views: 158.6ms | ActiveRecord: 0.7ms)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+
+
+Started GET "/groups/5/edit" for 127.0.0.1 at 2014-10-29 00:33:01 +0900
+Processing by GroupsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mActiveRecord::SessionStore::Session Load (0.5ms)[0m  [1mSELECT  "sessions".* FROM "sessions"  WHERE "sessions"."session_id" = 'dceadab35564e74e208e2c65940a9c5c'  ORDER BY "sessions"."id" ASC LIMIT 1[0m
+  Rendered groups/edit.html.erb within layouts/application (0.8ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 5  ORDER BY "users"."id" ASC LIMIT 1
+Completed 200 OK in 175ms (Views: 171.5ms | ActiveRecord: 0.8ms)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+
+
+Started GET "/assets/group.css?body=1" for 127.0.0.1 at 2014-10-29 00:33:02 +0900
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-10-29 00:33:02 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-29 00:33:02 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-29 00:33:02 +0900
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-10-29 00:33:02 +0900
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-10-29 00:33:02 +0900
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-29 00:33:02 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-29 00:33:02 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-29 00:33:02 +0900
+
+
+Started GET "/assets/group.js?body=1" for 127.0.0.1 at 2014-10-29 00:33:02 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-29 00:33:02 +0900
+
+
+Started GET "/groups/5/edit" for 127.0.0.1 at 2014-10-29 00:33:06 +0900
+Processing by GroupsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mActiveRecord::SessionStore::Session Load (0.5ms)[0m  [1mSELECT  "sessions".* FROM "sessions"  WHERE "sessions"."session_id" = 'dceadab35564e74e208e2c65940a9c5c'  ORDER BY "sessions"."id" ASC LIMIT 1[0m
+  Rendered groups/edit.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 5  ORDER BY "users"."id" ASC LIMIT 1
+Completed 200 OK in 156ms (Views: 151.9ms | ActiveRecord: 0.8ms)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-10-29 00:33:07 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-29 00:33:07 +0900
+
+
+Started GET "/assets/group.js?body=1" for 127.0.0.1 at 2014-10-29 00:33:07 +0900
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-10-29 00:33:07 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-29 00:33:07 +0900
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-29 00:33:07 +0900
+
+
+Started GET "/assets/group.css?body=1" for 127.0.0.1 at 2014-10-29 00:33:07 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-29 00:33:07 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-29 00:33:07 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-29 00:33:07 +0900
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-10-29 00:33:07 +0900
+
+
+Started GET "/groups/5" for 127.0.0.1 at 2014-10-29 00:33:09 +0900
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mActiveRecord::SessionStore::Session Load (0.3ms)[0m  [1mSELECT  "sessions".* FROM "sessions"  WHERE "sessions"."session_id" = 'dceadab35564e74e208e2c65940a9c5c'  ORDER BY "sessions"."id" ASC LIMIT 1[0m
+  [1m[35mGroup Load (0.2ms)[0m  SELECT  "groups".* FROM "groups"  WHERE "groups"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mGroupMaster Load (0.2ms)[0m  [1mSELECT  "group_masters".* FROM "group_masters"  WHERE "group_masters"."groupID" = ? AND "group_masters"."id" = ? LIMIT 1[0m  [["groupID", 5], ["id", 5]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 5  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered groups/show.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 205ms (Views: 191.7ms | ActiveRecord: 1.4ms)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/groups/5" for 127.0.0.1 at 2014-10-29 00:34:04 +0900
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mActiveRecord::SessionStore::Session Load (0.3ms)[0m  SELECT  "sessions".* FROM "sessions"  WHERE "sessions"."session_id" = 'dceadab35564e74e208e2c65940a9c5c'  ORDER BY "sessions"."id" ASC LIMIT 1
+  [1m[36mGroup Load (0.2ms)[0m  [1mSELECT  "groups".* FROM "groups"  WHERE "groups"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mGroupMaster Load (0.2ms)[0m  SELECT  "group_masters".* FROM "group_masters"  WHERE "group_masters"."groupID" = ? AND "group_masters"."id" = ? LIMIT 1  [["groupID", 5], ["id", 5]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 5  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered groups/show.html.erb within layouts/application (20.2ms)
+Completed 200 OK in 182ms (Views: 165.7ms | ActiveRecord: 1.3ms)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-10-29 00:34:05 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-29 00:34:05 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-29 00:34:05 +0900
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-29 00:34:05 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-29 00:34:05 +0900
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-10-29 00:34:05 +0900
+
+
+Started GET "/assets/group.js?body=1" for 127.0.0.1 at 2014-10-29 00:34:05 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-29 00:34:05 +0900
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-10-29 00:34:05 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-29 00:34:05 +0900
+
+
+Started GET "/assets/group.css?body=1" for 127.0.0.1 at 2014-10-29 00:34:05 +0900
+
+
+Started POST "/groups/5" for 127.0.0.1 at 2014-10-29 00:34:06 +0900
+
+ActionController::RoutingError (No route matches [POST] "/groups/5"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/mitsuba/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/mitsuba/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/mitsuba/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/mitsuba/.rvm/gems/ruby-2.1.3@global/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /Users/mitsuba/.rvm/gems/ruby-2.1.3@global/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (8.7ms)
+  Rendered /Users/mitsuba/.rvm/gems/ruby-2.1.3@global/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.5ms)
+  Rendered /Users/mitsuba/.rvm/gems/ruby-2.1.3@global/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (75.7ms)
+
+
+Started POST "/groups/5" for 127.0.0.1 at 2014-10-29 00:34:23 +0900
+
+ActionController::RoutingError (No route matches [POST] "/groups/5"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/mitsuba/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/mitsuba/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/mitsuba/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/mitsuba/.rvm/gems/ruby-2.1.3@global/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/mitsuba/.rvm/gems/ruby-2.1.3@global/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (10.3ms)
+  Rendered /Users/mitsuba/.rvm/gems/ruby-2.1.3@global/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.1ms)
+  Rendered /Users/mitsuba/.rvm/gems/ruby-2.1.3@global/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (77.0ms)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2014-10-29 00:34:28 +0900
+Processing by GroupsController#new as HTML
+  [1m[36mActiveRecord::SessionStore::Session Load (0.3ms)[0m  [1mSELECT  "sessions".* FROM "sessions"  WHERE "sessions"."session_id" = 'dceadab35564e74e208e2c65940a9c5c'  ORDER BY "sessions"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 5  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered groups/new.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 187ms (Views: 179.2ms | ActiveRecord: 1.1ms)
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/assets/group.css?body=1" for 127.0.0.1 at 2014-10-29 00:34:28 +0900
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-10-29 00:34:28 +0900
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-29 00:34:28 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-29 00:34:28 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-29 00:34:28 +0900
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-10-29 00:34:28 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-29 00:34:28 +0900
+
+
+Started GET "/assets/group.js?body=1" for 127.0.0.1 at 2014-10-29 00:34:28 +0900
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-10-29 00:34:28 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-29 00:34:28 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-29 00:34:28 +0900
+
+
+Started GET "/groups" for 127.0.0.1 at 2014-10-29 00:34:30 +0900
+Processing by GroupsController#index as HTML
+  [1m[35mActiveRecord::SessionStore::Session Load (0.8ms)[0m  SELECT  "sessions".* FROM "sessions"  WHERE "sessions"."session_id" = 'dceadab35564e74e208e2c65940a9c5c'  ORDER BY "sessions"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 5  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mGroup Load (0.2ms)[0m  SELECT "groups".* FROM "groups"
+  [1m[36mGroupSubscription Load (0.2ms)[0m  [1mSELECT "group_subscriptions".* FROM "group_subscriptions"  WHERE "group_subscriptions"."groupID" = ?[0m  [["groupID", 2]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mGroupSubscription Load (0.2ms)[0m  SELECT "group_subscriptions".* FROM "group_subscriptions"  WHERE "group_subscriptions"."groupID" = ?  [["groupID", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mGroupSubscription Load (0.2ms)[0m  SELECT "group_subscriptions".* FROM "group_subscriptions"  WHERE "group_subscriptions"."groupID" = ?  [["groupID", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered groups/index.html.erb within layouts/application (42.3ms)
+Completed 200 OK in 203ms (Views: 191.9ms | ActiveRecord: 4.0ms)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+
+
+Started GET "/groups/5" for 127.0.0.1 at 2014-10-29 00:34:31 +0900
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mActiveRecord::SessionStore::Session Load (0.3ms)[0m  [1mSELECT  "sessions".* FROM "sessions"  WHERE "sessions"."session_id" = 'dceadab35564e74e208e2c65940a9c5c'  ORDER BY "sessions"."id" ASC LIMIT 1[0m
+  [1m[35mGroup Load (0.2ms)[0m  SELECT  "groups".* FROM "groups"  WHERE "groups"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mGroupMaster Load (0.2ms)[0m  [1mSELECT  "group_masters".* FROM "group_masters"  WHERE "group_masters"."groupID" = ? AND "group_masters"."id" = ? LIMIT 1[0m  [["groupID", 5], ["id", 5]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 5  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered groups/show.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 176ms (Views: 167.2ms | ActiveRecord: 1.3ms)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/groups/5/edit" for 127.0.0.1 at 2014-10-29 00:34:33 +0900
+Processing by GroupsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mActiveRecord::SessionStore::Session Load (0.3ms)[0m  SELECT  "sessions".* FROM "sessions"  WHERE "sessions"."session_id" = 'dceadab35564e74e208e2c65940a9c5c'  ORDER BY "sessions"."id" ASC LIMIT 1
+  Rendered groups/edit.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 5  ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 200 OK in 169ms (Views: 165.9ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m

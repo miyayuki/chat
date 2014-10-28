@@ -31,6 +31,9 @@ class GroupsController < ApplicationController
 		redirect_to root_url
 	end
 
+	def edit
+	end
+
 	def index
 		@groups = Group.all
 	end
