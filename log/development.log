@@ -17146,3 +17146,902 @@ Completed 200 OK in 195ms (Views: 189.3ms | ActiveRecord: 3.3ms)
   [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
   [1m[35mSQL (0.6ms)[0m  UPDATE "sessions" SET "data" = ?, "updated_at" = ? WHERE "sessions"."id" = 20  [["data", "BAh7B0kiGXdhcmRlbi51c2VyLnVzZXIua2V5BjoGRVRbB1sGaQlJIiIkMmEk\nMTAka3JhcWlnN0R6ajVJcU5NTUNqNllqLgY7AFRJIhBfY3NyZl90b2tlbgY7\nAEZJIjFraGhFOHM4QzlsRDd1bHlZM0ZwQktEUS84OW5tay9abDNlNWRGYytz\nS2VVPQY7AEY=\n"], ["updated_at", "2014-10-27 15:28:18.607961"]]
   [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"   ORDER BY "users"."id" ASC LIMIT 1[0m
+
+
+Started GET "/groups" for 127.0.0.1 at 2014-10-28 00:52:55 +0900
+Processing by GroupsController#index as HTML
+  [1m[35mActiveRecord::SessionStore::Session Load (0.3ms)[0m  SELECT  "sessions".* FROM "sessions"  WHERE "sessions"."session_id" = '5a32b6475ca9889dd3fe9ff14d0f73fe'  ORDER BY "sessions"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mGroup Load (0.3ms)[0m  SELECT "groups".* FROM "groups"
+  [1m[36mGroupSubscription Load (0.3ms)[0m  [1mSELECT "group_subscriptions".* FROM "group_subscriptions"  WHERE "group_subscriptions"."groupID" = ?[0m  [["groupID", 2]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mGroupSubscription Load (0.2ms)[0m  SELECT "group_subscriptions".* FROM "group_subscriptions"  WHERE "group_subscriptions"."groupID" = ?  [["groupID", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered groups/index.html.erb within layouts/application (87.6ms)
+Completed 200 OK in 363ms (Views: 336.7ms | ActiveRecord: 5.5ms)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-10-28 00:52:56 +0900
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-28 00:52:56 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-28 00:52:56 +0900
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-10-28 00:52:56 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-28 00:52:56 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-28 00:52:56 +0900
+
+
+Started GET "/assets/group.css?body=1" for 127.0.0.1 at 2014-10-28 00:52:56 +0900
+
+
+Started GET "/assets/group.js?body=1" for 127.0.0.1 at 2014-10-28 00:52:56 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-28 00:52:56 +0900
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-10-28 00:52:56 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-28 00:52:56 +0900
+
+
+Started GET "/users" for 127.0.0.1 at 2014-10-28 00:52:58 +0900
+Processing by UsersController#index as HTML
+  [1m[35mActiveRecord::SessionStore::Session Load (0.4ms)[0m  SELECT  "sessions".* FROM "sessions"  WHERE "sessions"."session_id" = '5a32b6475ca9889dd3fe9ff14d0f73fe'  ORDER BY "sessions"."id" ASC LIMIT 1
+  [1m[36mUser Load (1.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (56.1ms)
+Completed 500 Internal Server Error in 67ms
+
+ActionView::Template::Error (undefined local variable or method `user' for #<#<Class:0x007fb770e75b10>:0x007fb770e6f8c8>):
+    17: 			</ul>
+    18: 		</li>
+    19: 	<% end %>
+    20: 	<% if user.master? %>
+    21: 		render 'master!'
+    22: 	<% end %>
+    23: </ul>
+  app/views/users/index.html.erb:20:in `_app_views_users_index_html_erb___2989121322720855091_70212924957720'
+
+
+  Rendered /Users/mitsuba/.rvm/gems/ruby-2.1.3@global/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /Users/mitsuba/.rvm/gems/ruby-2.1.3@global/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /Users/mitsuba/.rvm/gems/ruby-2.1.3@global/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (46.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2014-10-28 00:52:58 +0900
+Processing by UsersController#index as HTML
+  [1m[36mActiveRecord::SessionStore::Session Load (0.3ms)[0m  [1mSELECT  "sessions".* FROM "sessions"  WHERE "sessions"."session_id" = '5a32b6475ca9889dd3fe9ff14d0f73fe'  ORDER BY "sessions"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (44.7ms)
+Completed 500 Internal Server Error in 54ms
+
+ActionView::Template::Error (undefined local variable or method `user' for #<#<Class:0x007fb770e75b10>:0x007fb7763f1d78>):
+    17: 			</ul>
+    18: 		</li>
+    19: 	<% end %>
+    20: 	<% if user.master? %>
+    21: 		render 'master!'
+    22: 	<% end %>
+    23: </ul>
+  app/views/users/index.html.erb:20:in `_app_views_users_index_html_erb___2989121322720855091_70212969792800'
+
+
+  Rendered /Users/mitsuba/.rvm/gems/ruby-2.1.3@global/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /Users/mitsuba/.rvm/gems/ruby-2.1.3@global/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /Users/mitsuba/.rvm/gems/ruby-2.1.3@global/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (32.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2014-10-28 01:04:42 +0900
+Processing by UsersController#index as HTML
+  [1m[35mActiveRecord::SessionStore::Session Load (0.3ms)[0m  SELECT  "sessions".* FROM "sessions"  WHERE "sessions"."session_id" = '5a32b6475ca9889dd3fe9ff14d0f73fe'  ORDER BY "sessions"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (33.1ms)
+Completed 200 OK in 195ms (Views: 183.2ms | ActiveRecord: 3.1ms)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+
+
+Started GET "/assets/group.css?body=1" for 127.0.0.1 at 2014-10-28 01:04:43 +0900
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-10-28 01:04:43 +0900
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-10-28 01:04:43 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-28 01:04:43 +0900
+
+
+Started GET "/assets/group.js?body=1" for 127.0.0.1 at 2014-10-28 01:04:43 +0900
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-28 01:04:43 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-28 01:04:43 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-28 01:04:43 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-28 01:04:43 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-28 01:04:43 +0900
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-10-28 01:04:43 +0900
+
+
+Started GET "/groups" for 127.0.0.1 at 2014-10-28 01:04:47 +0900
+Processing by GroupsController#index as HTML
+  [1m[36mActiveRecord::SessionStore::Session Load (0.3ms)[0m  [1mSELECT  "sessions".* FROM "sessions"  WHERE "sessions"."session_id" = '5a32b6475ca9889dd3fe9ff14d0f73fe'  ORDER BY "sessions"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mGroup Load (0.3ms)[0m  [1mSELECT "groups".* FROM "groups"[0m
+  [1m[35mGroupSubscription Load (0.4ms)[0m  SELECT "group_subscriptions".* FROM "group_subscriptions"  WHERE "group_subscriptions"."groupID" = ?  [["groupID", 2]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mGroupSubscription Load (0.2ms)[0m  [1mSELECT "group_subscriptions".* FROM "group_subscriptions"  WHERE "group_subscriptions"."groupID" = ?[0m  [["groupID", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered groups/index.html.erb within layouts/application (41.9ms)
+Completed 200 OK in 209ms (Views: 192.5ms | ActiveRecord: 3.6ms)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+
+
+Started GET "/groups/2" for 127.0.0.1 at 2014-10-28 01:04:48 +0900
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mActiveRecord::SessionStore::Session Load (0.3ms)[0m  [1mSELECT  "sessions".* FROM "sessions"  WHERE "sessions"."session_id" = '5a32b6475ca9889dd3fe9ff14d0f73fe'  ORDER BY "sessions"."id" ASC LIMIT 1[0m
+  [1m[35mGroup Load (0.4ms)[0m  SELECT  "groups".* FROM "groups"  WHERE "groups"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered groups/show.html.erb within layouts/application (8.4ms)
+Completed 500 Internal Server Error in 19ms
+
+ActionView::Template::Error (undefined method `master?' for #<User:0x007fb7768693d8>):
+     6: <%= @group.id %>
+     7: </h2>
+     8: 
+     9: <% if current_user.master? && current_user.master(@group.id) == true%>
+    10: 	<%= link_to "delete", @group, method: :delete,data: { confirm: "You sure?" } %>
+    11: <% end %>
+  app/views/groups/show.html.erb:9:in `_app_views_groups_show_html_erb__2039850325760597290_70212972185580'
+
+
+  Rendered /Users/mitsuba/.rvm/gems/ruby-2.1.3@global/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /Users/mitsuba/.rvm/gems/ruby-2.1.3@global/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.6ms)
+  Rendered /Users/mitsuba/.rvm/gems/ruby-2.1.3@global/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (30.6ms)
+
+
+Started GET "/groups/2" for 127.0.0.1 at 2014-10-28 01:04:49 +0900
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mActiveRecord::SessionStore::Session Load (0.3ms)[0m  SELECT  "sessions".* FROM "sessions"  WHERE "sessions"."session_id" = '5a32b6475ca9889dd3fe9ff14d0f73fe'  ORDER BY "sessions"."id" ASC LIMIT 1
+  [1m[36mGroup Load (0.2ms)[0m  [1mSELECT  "groups".* FROM "groups"  WHERE "groups"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered groups/show.html.erb within layouts/application (5.0ms)
+Completed 500 Internal Server Error in 12ms
+
+ActionView::Template::Error (undefined method `master?' for #<User:0x007fb775f6f8b8>):
+     6: <%= @group.id %>
+     7: </h2>
+     8: 
+     9: <% if current_user.master? && current_user.master(@group.id) == true%>
+    10: 	<%= link_to "delete", @group, method: :delete,data: { confirm: "You sure?" } %>
+    11: <% end %>
+  app/views/groups/show.html.erb:9:in `_app_views_groups_show_html_erb__2039850325760597290_70212971846140'
+
+
+  Rendered /Users/mitsuba/.rvm/gems/ruby-2.1.3@global/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /Users/mitsuba/.rvm/gems/ruby-2.1.3@global/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.7ms)
+  Rendered /Users/mitsuba/.rvm/gems/ruby-2.1.3@global/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (31.8ms)
+
+
+Started GET "/groups/2" for 127.0.0.1 at 2014-10-28 01:05:04 +0900
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mActiveRecord::SessionStore::Session Load (0.3ms)[0m  [1mSELECT  "sessions".* FROM "sessions"  WHERE "sessions"."session_id" = '5a32b6475ca9889dd3fe9ff14d0f73fe'  ORDER BY "sessions"."id" ASC LIMIT 1[0m
+  [1m[35mGroup Load (0.3ms)[0m  SELECT  "groups".* FROM "groups"  WHERE "groups"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered groups/show.html.erb within layouts/application (6.2ms)
+Completed 500 Internal Server Error in 18ms
+
+ActionView::Template::Error (undefined method `master' for #<User:0x007fb7766017a8>):
+     6: <%= @group.id %>
+     7: </h2>
+     8: 
+     9: <% if current_user.master(@group.id) == true%>
+    10: 	<%= link_to "delete", @group, method: :delete,data: { confirm: "You sure?" } %>
+    11: <% end %>
+  app/views/groups/show.html.erb:9:in `_app_views_groups_show_html_erb__2039850325760597290_70212971021700'
+
+
+  Rendered /Users/mitsuba/.rvm/gems/ruby-2.1.3@global/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /Users/mitsuba/.rvm/gems/ruby-2.1.3@global/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.3ms)
+  Rendered /Users/mitsuba/.rvm/gems/ruby-2.1.3@global/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (33.8ms)
+
+
+Started GET "/groups/2" for 127.0.0.1 at 2014-10-28 01:05:06 +0900
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mActiveRecord::SessionStore::Session Load (0.3ms)[0m  SELECT  "sessions".* FROM "sessions"  WHERE "sessions"."session_id" = '5a32b6475ca9889dd3fe9ff14d0f73fe'  ORDER BY "sessions"."id" ASC LIMIT 1
+  [1m[36mGroup Load (0.2ms)[0m  [1mSELECT  "groups".* FROM "groups"  WHERE "groups"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered groups/show.html.erb within layouts/application (6.0ms)
+Completed 500 Internal Server Error in 16ms
+
+ActionView::Template::Error (undefined method `master' for #<User:0x007fb7758a9560>):
+     6: <%= @group.id %>
+     7: </h2>
+     8: 
+     9: <% if current_user.master(@group.id) == true%>
+    10: 	<%= link_to "delete", @group, method: :delete,data: { confirm: "You sure?" } %>
+    11: <% end %>
+  app/views/groups/show.html.erb:9:in `_app_views_groups_show_html_erb__2039850325760597290_70212971021700'
+
+
+  Rendered /Users/mitsuba/.rvm/gems/ruby-2.1.3@global/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.0ms)
+  Rendered /Users/mitsuba/.rvm/gems/ruby-2.1.3@global/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.4ms)
+  Rendered /Users/mitsuba/.rvm/gems/ruby-2.1.3@global/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (42.3ms)
+
+
+Started GET "/groups/2" for 127.0.0.1 at 2014-10-28 01:06:11 +0900
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mActiveRecord::SessionStore::Session Load (0.2ms)[0m  [1mSELECT  "sessions".* FROM "sessions"  WHERE "sessions"."session_id" = '5a32b6475ca9889dd3fe9ff14d0f73fe'  ORDER BY "sessions"."id" ASC LIMIT 1[0m
+  [1m[35mGroup Load (0.3ms)[0m  SELECT  "groups".* FROM "groups"  WHERE "groups"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered groups/show.html.erb within layouts/application (32.2ms)
+Completed 500 Internal Server Error in 61ms
+
+ActionView::Template::Error (undefined method `master' for #<User:0x007fb7734519b0>):
+     6: <%= @group.id %>
+     7: </h2>
+     8: 
+     9: <% if current_user.master(@group.id) == true%>
+    10: 	<%= link_to "delete", @group, method: :delete,data: { confirm: "You sure?" } %>
+    11: <% end %>
+  app/views/groups/show.html.erb:9:in `_app_views_groups_show_html_erb__2039850325760597290_70212944906920'
+
+
+  Rendered /Users/mitsuba/.rvm/gems/ruby-2.1.3@global/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /Users/mitsuba/.rvm/gems/ruby-2.1.3@global/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.8ms)
+  Rendered /Users/mitsuba/.rvm/gems/ruby-2.1.3@global/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (33.0ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"   ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"   ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mGroup Load (0.2ms)[0m  [1mSELECT  "groups".* FROM "groups"   ORDER BY "groups"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"   ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mGroupSubscription Load (0.5ms)[0m  [1mSELECT "group_subscriptions".* FROM "group_subscriptions"  WHERE "group_subscriptions"."userID" = ?[0m  [["userID", 1]]
+  [1m[35mGroup Load (0.3ms)[0m  SELECT  "groups".* FROM "groups"  WHERE "groups"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"   ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"   ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mGroupSubscription Load (0.3ms)[0m  SELECT "group_subscriptions".* FROM "group_subscriptions"  WHERE "group_subscriptions"."userID" = ?  [["userID", 1]]
+  [1m[36mGroup Load (0.2ms)[0m  [1mSELECT  "groups".* FROM "groups"  WHERE "groups"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"   ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mGroupSubscription Load (0.3ms)[0m  SELECT "group_subscriptions".* FROM "group_subscriptions"  WHERE "group_subscriptions"."userID" = ?  [["userID", 1]]
+  [1m[36mGroup Load (0.2ms)[0m  [1mSELECT  "groups".* FROM "groups"  WHERE "groups"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"   ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mGroupSubscription Load (0.3ms)[0m  [1mSELECT "group_subscriptions".* FROM "group_subscriptions"  WHERE "group_subscriptions"."userID" = ?[0m  [["userID", 1]]
+  [1m[35mGroup Load (0.2ms)[0m  SELECT  "groups".* FROM "groups"  WHERE "groups"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"   ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"   ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mGroupSubscription Load (0.3ms)[0m  [1mSELECT "group_subscriptions".* FROM "group_subscriptions"  WHERE "group_subscriptions"."userID" = ?[0m  [["userID", 1]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"   ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"   ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mGroupSubscription Load (0.3ms)[0m  SELECT "group_subscriptions".* FROM "group_subscriptions"  WHERE "group_subscriptions"."userID" = ?  [["userID", 1]]
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-28 01:16:38 +0900
+Processing by HomeController#index as HTML
+  [1m[35mActiveRecord::SessionStore::Session Load (0.3ms)[0m  SELECT  "sessions".* FROM "sessions"  WHERE "sessions"."session_id" = '5a32b6475ca9889dd3fe9ff14d0f73fe'  ORDER BY "sessions"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered home/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 224ms (Views: 189.8ms | ActiveRecord: 2.4ms)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-10-28 01:16:38 +0900
+
+
+Started GET "/assets/group.css?body=1" for 127.0.0.1 at 2014-10-28 01:16:38 +0900
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-10-28 01:16:38 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-28 01:16:38 +0900
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-10-28 01:16:38 +0900
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-28 01:16:38 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-28 01:16:38 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-28 01:16:38 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-28 01:16:38 +0900
+
+
+Started GET "/assets/group.js?body=1" for 127.0.0.1 at 2014-10-28 01:16:39 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-28 01:16:39 +0900
+
+
+Started GET "/users" for 127.0.0.1 at 2014-10-28 01:16:40 +0900
+Processing by UsersController#index as HTML
+  [1m[35mActiveRecord::SessionStore::Session Load (0.4ms)[0m  SELECT  "sessions".* FROM "sessions"  WHERE "sessions"."session_id" = '5a32b6475ca9889dd3fe9ff14d0f73fe'  ORDER BY "sessions"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 172ms (Views: 162.6ms | ActiveRecord: 1.1ms)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mGroupSubscription Load (0.2ms)[0m  SELECT "group_subscriptions".* FROM "group_subscriptions"  WHERE "group_subscriptions"."userID" = ?  [["userID", 4]]
+
+
+Started GET "/users" for 127.0.0.1 at 2014-10-28 01:24:49 +0900
+Processing by UsersController#index as HTML
+  [1m[36mActiveRecord::SessionStore::Session Load (0.3ms)[0m  [1mSELECT  "sessions".* FROM "sessions"  WHERE "sessions"."session_id" = '5a32b6475ca9889dd3fe9ff14d0f73fe'  ORDER BY "sessions"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 155ms (Views: 151.2ms | ActiveRecord: 0.9ms)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-10-28 01:24:49 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-28 01:24:49 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-28 01:24:49 +0900
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-28 01:24:49 +0900
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-10-28 01:24:49 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-28 01:24:49 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-28 01:24:49 +0900
+
+
+Started GET "/assets/group.js?body=1" for 127.0.0.1 at 2014-10-28 01:24:49 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-28 01:24:49 +0900
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-10-28 01:24:49 +0900
+
+
+Started GET "/assets/group.css?body=1" for 127.0.0.1 at 2014-10-28 01:24:49 +0900
+
+
+Started GET "/groups" for 127.0.0.1 at 2014-10-28 01:24:54 +0900
+Processing by GroupsController#index as HTML
+  [1m[35mActiveRecord::SessionStore::Session Load (0.3ms)[0m  SELECT  "sessions".* FROM "sessions"  WHERE "sessions"."session_id" = '5a32b6475ca9889dd3fe9ff14d0f73fe'  ORDER BY "sessions"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mGroup Load (0.3ms)[0m  SELECT "groups".* FROM "groups"
+  [1m[36mGroupSubscription Load (0.4ms)[0m  [1mSELECT "group_subscriptions".* FROM "group_subscriptions"  WHERE "group_subscriptions"."groupID" = ?[0m  [["groupID", 2]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mGroupSubscription Load (0.2ms)[0m  SELECT "group_subscriptions".* FROM "group_subscriptions"  WHERE "group_subscriptions"."groupID" = ?  [["groupID", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered groups/index.html.erb within layouts/application (39.1ms)
+Completed 200 OK in 194ms (Views: 181.2ms | ActiveRecord: 3.7ms)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/groups/2" for 127.0.0.1 at 2014-10-28 01:24:55 +0900
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mActiveRecord::SessionStore::Session Load (0.4ms)[0m  SELECT  "sessions".* FROM "sessions"  WHERE "sessions"."session_id" = '5a32b6475ca9889dd3fe9ff14d0f73fe'  ORDER BY "sessions"."id" ASC LIMIT 1
+  [1m[36mGroup Load (0.3ms)[0m  [1mSELECT  "groups".* FROM "groups"  WHERE "groups"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered groups/show.html.erb within layouts/application (7.2ms)
+Completed 500 Internal Server Error in 19ms
+
+ActionView::Template::Error (undefined method `master' for #<User:0x007fb77499b2f8>):
+     6: <%= @group.id %>
+     7: </h2>
+     8: 
+     9: <% if current_user.master(@group.id) == true%>
+    10: 	<%= link_to "delete", @group, method: :delete,data: { confirm: "You sure?" } %>
+    11: <% end %>
+  app/views/groups/show.html.erb:9:in `_app_views_groups_show_html_erb__2039850325760597290_70212956049100'
+
+
+  Rendered /Users/mitsuba/.rvm/gems/ruby-2.1.3@global/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered /Users/mitsuba/.rvm/gems/ruby-2.1.3@global/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.4ms)
+  Rendered /Users/mitsuba/.rvm/gems/ruby-2.1.3@global/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (46.6ms)
+
+
+Started GET "/groups/2" for 127.0.0.1 at 2014-10-28 01:24:55 +0900
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mActiveRecord::SessionStore::Session Load (1.0ms)[0m  [1mSELECT  "sessions".* FROM "sessions"  WHERE "sessions"."session_id" = '5a32b6475ca9889dd3fe9ff14d0f73fe'  ORDER BY "sessions"."id" ASC LIMIT 1[0m
+  [1m[35mGroup Load (0.2ms)[0m  SELECT  "groups".* FROM "groups"  WHERE "groups"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered groups/show.html.erb within layouts/application (5.5ms)
+Completed 500 Internal Server Error in 17ms
+
+ActionView::Template::Error (undefined method `master' for #<User:0x007fb774932960>):
+     6: <%= @group.id %>
+     7: </h2>
+     8: 
+     9: <% if current_user.master(@group.id) == true%>
+    10: 	<%= link_to "delete", @group, method: :delete,data: { confirm: "You sure?" } %>
+    11: <% end %>
+  app/views/groups/show.html.erb:9:in `_app_views_groups_show_html_erb__2039850325760597290_70212955832380'
+
+
+  Rendered /Users/mitsuba/.rvm/gems/ruby-2.1.3@global/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendered /Users/mitsuba/.rvm/gems/ruby-2.1.3@global/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.6ms)
+  Rendered /Users/mitsuba/.rvm/gems/ruby-2.1.3@global/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (33.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mGroupSubscription Load (0.2ms)[0m  SELECT "group_subscriptions".* FROM "group_subscriptions"  WHERE "group_subscriptions"."userID" = ?  [["userID", 4]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mGroupSubscription Load (0.3ms)[0m  SELECT "group_subscriptions".* FROM "group_subscriptions"  WHERE "group_subscriptions"."userID" = ?  [["userID", 4]]
+  [1m[36mGroup Load (0.3ms)[0m  [1mSELECT  "groups".* FROM "groups"   ORDER BY "groups"."id" ASC LIMIT 1[0m
+  [1m[35mGroupSubscription Load (0.4ms)[0m  SELECT "group_subscriptions".* FROM "group_subscriptions"  WHERE "group_subscriptions"."groupID" = ?  [["groupID", 2]]
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-28 16:32:38 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 296ms (Views: 274.9ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (6.5ms)[0m  [1mINSERT INTO "sessions" ("created_at", "data", "session_id", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", "2014-10-28 07:32:38.937033"], ["data", "BAh7BkkiEF9jc3JmX3Rva2VuBjoGRUZJIjFYYlV5ZU5USUVScnRqZmtOVkVY\ncU5rZDYyMkVFaHkzd3Qvb1piSlA0eEhJPQY7AEY=\n"], ["session_id", "3c76837a0730da2511ba2dca1300e74b"], ["updated_at", "2014-10-28 07:32:38.937033"]]
+  [1m[35m (20.2ms)[0m  commit transaction
+
+
+Started GET "/assets/group.css?body=1" for 127.0.0.1 at 2014-10-28 16:32:39 +0900
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-10-28 16:32:39 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-28 16:32:39 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-28 16:32:39 +0900
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-10-28 16:32:39 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-28 16:32:39 +0900
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-28 16:32:39 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-28 16:32:39 +0900
+
+
+Started GET "/assets/group.js?body=1" for 127.0.0.1 at 2014-10-28 16:32:39 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-28 16:32:39 +0900
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-10-28 16:32:39 +0900
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-10-28 16:32:41 +0900
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mActiveRecord::SessionStore::Session Load (0.3ms)[0m  [1mSELECT  "sessions".* FROM "sessions"  WHERE "sessions"."session_id" = '3c76837a0730da2511ba2dca1300e74b'  ORDER BY "sessions"."id" ASC LIMIT 1[0m
+  Rendered devise/shared/_links.html.erb (3.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (60.7ms)
+Completed 200 OK in 246ms (Views: 194.6ms | ActiveRecord: 1.5ms)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-10-28 16:32:48 +0900
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XbUyeNTIERrtjfkNVEXqNkd622EEhy3wt/oZbJP4xHI=", "user"=>{"email"=>"jibanyan@youkai.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mActiveRecord::SessionStore::Session Load (0.4ms)[0m  SELECT  "sessions".* FROM "sessions"  WHERE "sessions"."session_id" = '3c76837a0730da2511ba2dca1300e74b'  ORDER BY "sessions"."id" ASC LIMIT 1
+  [1m[36mUser Load (3.9ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = 'jibanyan@youkai.com'  ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 401 Unauthorized in 181ms
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XbUyeNTIERrtjfkNVEXqNkd622EEhy3wt/oZbJP4xHI=", "user"=>{"email"=>"jibanyan@youkai.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 308ms (Views: 143.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mUPDATE "sessions" SET "data" = ?, "updated_at" = ? WHERE "sessions"."id" = 21[0m  [["data", "BAh7B0kiEF9jc3JmX3Rva2VuBjoGRUZJIjFYYlV5ZU5USUVScnRqZmtOVkVY\ncU5rZDYyMkVFaHkzd3Qvb1piSlA0eEhJPQY7AEZJIgpmbGFzaAY7AFR7B0ki\nDGRpc2NhcmQGOwBUWwZJIgphbGVydAY7AEZJIgxmbGFzaGVzBjsAVHsGSSIK\nYWxlcnQGOwBGSSIfSW52YWxpZCBlbWFpbCBvciBwYXNzd29yZC4GOwBU\n"], ["updated_at", "2014-10-28 07:32:49.375266"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+
+
+Started GET "/assets/group.css?body=1" for 127.0.0.1 at 2014-10-28 16:32:49 +0900
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-10-28 16:32:49 +0900
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-10-28 16:32:49 +0900
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-28 16:32:49 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-28 16:32:49 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-28 16:32:49 +0900
+
+
+Started GET "/assets/group.js?body=1" for 127.0.0.1 at 2014-10-28 16:32:49 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-28 16:32:49 +0900
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-10-28 16:32:49 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-28 16:32:49 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-28 16:32:49 +0900
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-10-28 16:32:53 +0900
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XbUyeNTIERrtjfkNVEXqNkd622EEhy3wt/oZbJP4xHI=", "user"=>{"email"=>"jibanyan@youkai.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mActiveRecord::SessionStore::Session Load (0.4ms)[0m  [1mSELECT  "sessions".* FROM "sessions"  WHERE "sessions"."session_id" = '3c76837a0730da2511ba2dca1300e74b'  ORDER BY "sessions"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."email" = 'jibanyan@youkai.com'  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  UPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = 4  [["current_sign_in_at", "2014-10-28 07:32:53.628542"], ["last_sign_in_at", "2014-10-27 13:51:44.258879"], ["sign_in_count", 6], ["updated_at", "2014-10-28 07:32:53.631076"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 193ms (ActiveRecord: 3.1ms)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mDELETE FROM "sessions" WHERE "sessions"."id" = ?[0m  [["id", 21]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36mActiveRecord::SessionStore::Session Load (0.3ms)[0m  [1mSELECT  "sessions".* FROM "sessions"  WHERE "sessions"."session_id" = 'c79e1b2372926313372011ae66bac334'  ORDER BY "sessions"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "sessions" ("created_at", "data", "session_id", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", "2014-10-28 07:32:53.660255"], ["data", "BAh7B0kiCmZsYXNoBjoGRVR7B0kiDGRpc2NhcmQGOwBUWwBJIgxmbGFzaGVz\nBjsAVHsGSSILbm90aWNlBjsARkkiHFNpZ25lZCBpbiBzdWNjZXNzZnVsbHku\nBjsAVEkiGXdhcmRlbi51c2VyLnVzZXIua2V5BjsAVFsHWwZpCUkiIiQyYSQx\nMCRrcmFxaWc3RHpqNUlxTk1NQ2o2WWouBjsAVA==\n"], ["session_id", "c79e1b2372926313372011ae66bac334"], ["updated_at", "2014-10-28 07:32:53.660255"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-28 16:32:53 +0900
+Processing by HomeController#index as HTML
+  [1m[36mActiveRecord::SessionStore::Session Load (0.4ms)[0m  [1mSELECT  "sessions".* FROM "sessions"  WHERE "sessions"."session_id" = 'c79e1b2372926313372011ae66bac334'  ORDER BY "sessions"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered home/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 135ms (Views: 129.3ms | ActiveRecord: 0.6ms)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  UPDATE "sessions" SET "data" = ?, "updated_at" = ? WHERE "sessions"."id" = 22  [["data", "BAh7CEkiCmZsYXNoBjoGRVR7B0kiDGRpc2NhcmQGOwBUWwZJIgtub3RpY2UG\nOwBGSSIMZmxhc2hlcwY7AFR7BkAKSSIcU2lnbmVkIGluIHN1Y2Nlc3NmdWxs\neS4GOwBUSSIZd2FyZGVuLnVzZXIudXNlci5rZXkGOwBUWwdbBmkJSSIiJDJh\nJDEwJGtyYXFpZzdEemo1SXFOTU1DajZZai4GOwBUSSIQX2NzcmZfdG9rZW4G\nOwBGSSIxbkJIeWpYcWVsWEdLK2hWZEtVc3ljcEJHa1hpTlc3QmVJd21FbjJv\nUFJ2QT0GOwBG\n"], ["updated_at", "2014-10-28 07:32:53.823592"]]
+  [1m[36m (4.5ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-10-28 16:32:54 +0900
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-10-28 16:32:54 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-28 16:32:54 +0900
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-28 16:32:54 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-28 16:32:54 +0900
+
+
+Started GET "/assets/group.css?body=1" for 127.0.0.1 at 2014-10-28 16:32:54 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-28 16:32:54 +0900
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-10-28 16:32:54 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-28 16:32:54 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-28 16:32:54 +0900
+
+
+Started GET "/assets/group.js?body=1" for 127.0.0.1 at 2014-10-28 16:32:54 +0900
+
+
+Started GET "/users" for 127.0.0.1 at 2014-10-28 16:32:58 +0900
+Processing by UsersController#index as HTML
+  [1m[35mActiveRecord::SessionStore::Session Load (0.4ms)[0m  SELECT  "sessions".* FROM "sessions"  WHERE "sessions"."session_id" = 'c79e1b2372926313372011ae66bac334'  ORDER BY "sessions"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (18.4ms)
+Completed 200 OK in 177ms (Views: 170.3ms | ActiveRecord: 1.2ms)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "sessions" SET "data" = ?, "updated_at" = ? WHERE "sessions"."id" = 22  [["data", "BAh7B0kiGXdhcmRlbi51c2VyLnVzZXIua2V5BjoGRVRbB1sGaQlJIiIkMmEk\nMTAka3JhcWlnN0R6ajVJcU5NTUNqNllqLgY7AFRJIhBfY3NyZl90b2tlbgY7\nAEZJIjFuQkh5alhxZWxYR0sraFZkS1VzeWNwQkdrWGlOVzdCZUl3bUVuMm9Q\nUnZBPQY7AEY=\n"], ["updated_at", "2014-10-28 07:32:58.271908"]]
+  [1m[36m (2.8ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/users" for 127.0.0.1 at 2014-10-28 17:17:42 +0900
+Processing by UsersController#index as HTML
+  [1m[35mActiveRecord::SessionStore::Session Load (0.4ms)[0m  SELECT  "sessions".* FROM "sessions"  WHERE "sessions"."session_id" = 'c79e1b2372926313372011ae66bac334'  ORDER BY "sessions"."id" ASC LIMIT 1
+  Rendered users/index.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 9ms
+
+SyntaxError (/Users/mitsuba/sandbox/app/views/users/index.html.erb:6: syntax error, unexpected tSYMBEG, expecting '('
+...pend=( link_to(user.username. :controller => :user, :action ...
+...                               ^):
+  app/views/users/index.html.erb:6: syntax error, unexpected tSYMBEG, expecting '('
+
+
+  Rendered /Users/mitsuba/.rvm/gems/ruby-2.1.3@global/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.6ms)
+  Rendered /Users/mitsuba/.rvm/gems/ruby-2.1.3@global/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendered /Users/mitsuba/.rvm/gems/ruby-2.1.3@global/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.5ms)
+  Rendered /Users/mitsuba/.rvm/gems/ruby-2.1.3@global/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (61.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2014-10-28 17:17:52 +0900
+Processing by UsersController#index as HTML
+  [1m[36mActiveRecord::SessionStore::Session Load (0.3ms)[0m  [1mSELECT  "sessions".* FROM "sessions"  WHERE "sessions"."session_id" = 'c79e1b2372926313372011ae66bac334'  ORDER BY "sessions"."id" ASC LIMIT 1[0m
+  Rendered users/index.html.erb within layouts/application (1.8ms)
+Completed 500 Internal Server Error in 9ms
+
+SyntaxError (/Users/mitsuba/sandbox/app/views/users/index.html.erb:6: syntax error, unexpected tSYMBEG, expecting '('
+...pend=( link_to(user.username. :controller => :user, :action ...
+...                               ^
+/Users/mitsuba/sandbox/app/views/users/index.html.erb:6: syntax error, unexpected ')', expecting keyword_end
+..., :username => user.username) );@output_buffer.safe_append='
+...                               ^):
+  app/views/users/index.html.erb:6: syntax error, unexpected tSYMBEG, expecting '('
+  app/views/users/index.html.erb:6: syntax error, unexpected ')', expecting keyword_end
+
+
+  Rendered /Users/mitsuba/.rvm/gems/ruby-2.1.3@global/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.5ms)
+  Rendered /Users/mitsuba/.rvm/gems/ruby-2.1.3@global/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendered /Users/mitsuba/.rvm/gems/ruby-2.1.3@global/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.8ms)
+  Rendered /Users/mitsuba/.rvm/gems/ruby-2.1.3@global/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (43.1ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2014-10-28 17:18:39 +0900
+Processing by UsersController#index as HTML
+  [1m[35mActiveRecord::SessionStore::Session Load (0.3ms)[0m  SELECT  "sessions".* FROM "sessions"  WHERE "sessions"."session_id" = 'c79e1b2372926313372011ae66bac334'  ORDER BY "sessions"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (17.3ms)
+Completed 500 Internal Server Error in 26ms
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"user", :username=>"test1"}):
+    3: <ul class="users">
+    4: 	<% @users.each do |user| %>
+    5: 		<li>
+    6: 			<%= link_to(user.username, :controller => :user, :action => :show, :username => user.username) %>
+    7: 			User ID: <%= user.id %>
+    8: 			<ul>
+    9: 				<li>
+  app/views/users/index.html.erb:6:in `block in _app_views_users_index_html_erb___3218932603521321188_70148809266220'
+  app/views/users/index.html.erb:4:in `_app_views_users_index_html_erb___3218932603521321188_70148809266220'
+
+
+  Rendered /Users/mitsuba/.rvm/gems/ruby-2.1.3@global/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.3ms)
+  Rendered /Users/mitsuba/.rvm/gems/ruby-2.1.3@global/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.6ms)
+  Rendered /Users/mitsuba/.rvm/gems/ruby-2.1.3@global/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (39.3ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2014-10-28 17:19:53 +0900
+Processing by UsersController#index as HTML
+  [1m[36mActiveRecord::SessionStore::Session Load (0.2ms)[0m  [1mSELECT  "sessions".* FROM "sessions"  WHERE "sessions"."session_id" = 'c79e1b2372926313372011ae66bac334'  ORDER BY "sessions"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (30.3ms)
+Completed 500 Internal Server Error in 45ms
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"users", :username=>"test1"}):
+    3: <ul class="users">
+    4: 	<% @users.each do |user| %>
+    5: 		<li>
+    6: 			<%= link_to(user.username, :controller => :users, :action => :show, :username => user.username) %>
+    7: 			<br>
+    8: 			User ID: <%= user.id %>
+    9: 			<ul>
+  app/views/users/index.html.erb:6:in `block in _app_views_users_index_html_erb___3218932603521321188_70148796253400'
+  app/views/users/index.html.erb:4:in `_app_views_users_index_html_erb___3218932603521321188_70148796253400'
+
+
+  Rendered /Users/mitsuba/.rvm/gems/ruby-2.1.3@global/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /Users/mitsuba/.rvm/gems/ruby-2.1.3@global/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.9ms)
+  Rendered /Users/mitsuba/.rvm/gems/ruby-2.1.3@global/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (33.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2014-10-28 17:20:50 +0900
+Processing by UsersController#index as HTML
+  [1m[35mActiveRecord::SessionStore::Session Load (0.4ms)[0m  SELECT  "sessions".* FROM "sessions"  WHERE "sessions"."session_id" = 'c79e1b2372926313372011ae66bac334'  ORDER BY "sessions"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (16.1ms)
+Completed 500 Internal Server Error in 35ms
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"users", :name=>"test1"}):
+    3: <ul class="users">
+    4: 	<% @users.each do |user| %>
+    5: 		<li>
+    6: 			<%= link_to(user.username, :controller => :users, :action => :show, :name => user.username) %>
+    7: 			<br>
+    8: 			User ID: <%= user.id %>
+    9: 			<ul>
+  app/views/users/index.html.erb:6:in `block in _app_views_users_index_html_erb___3218932603521321188_70148777340200'
+  app/views/users/index.html.erb:4:in `_app_views_users_index_html_erb___3218932603521321188_70148777340200'
+
+
+  Rendered /Users/mitsuba/.rvm/gems/ruby-2.1.3@global/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendered /Users/mitsuba/.rvm/gems/ruby-2.1.3@global/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /Users/mitsuba/.rvm/gems/ruby-2.1.3@global/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (32.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2014-10-28 17:21:56 +0900
+Processing by UsersController#index as HTML
+  [1m[36mActiveRecord::SessionStore::Session Load (0.3ms)[0m  [1mSELECT  "sessions".* FROM "sessions"  WHERE "sessions"."session_id" = 'c79e1b2372926313372011ae66bac334'  ORDER BY "sessions"."id" ASC LIMIT 1[0m
+  Rendered users/index.html.erb within layouts/application (1.8ms)
+Completed 500 Internal Server Error in 9ms
+
+SyntaxError (/Users/mitsuba/sandbox/app/views/users/index.html.erb:21: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;	 end 
+         	    ^
+/Users/mitsuba/sandbox/app/views/users/index.html.erb:23: syntax error, unexpected keyword_end, expecting ')'
+'.freeze; end 
+             ^
+/Users/mitsuba/sandbox/app/views/users/index.html.erb:25: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/mitsuba/sandbox/app/views/users/index.html.erb:27: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/users/index.html.erb:21: syntax error, unexpected keyword_end, expecting ')'
+  app/views/users/index.html.erb:23: syntax error, unexpected keyword_end, expecting ')'
+  app/views/users/index.html.erb:25: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/users/index.html.erb:27: syntax error, unexpected keyword_end, expecting ')'
+
+
+  Rendered /Users/mitsuba/.rvm/gems/ruby-2.1.3@global/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.3ms)
+  Rendered /Users/mitsuba/.rvm/gems/ruby-2.1.3@global/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /Users/mitsuba/.rvm/gems/ruby-2.1.3@global/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /Users/mitsuba/.rvm/gems/ruby-2.1.3@global/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (41.3ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2014-10-28 17:22:05 +0900
+Processing by UsersController#index as HTML
+  [1m[35mActiveRecord::SessionStore::Session Load (0.3ms)[0m  SELECT  "sessions".* FROM "sessions"  WHERE "sessions"."session_id" = 'c79e1b2372926313372011ae66bac334'  ORDER BY "sessions"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 141ms (Views: 137.7ms | ActiveRecord: 1.0ms)
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-10-28 17:22:05 +0900
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-28 17:22:05 +0900
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-28 17:22:05 +0900
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-10-28 17:22:05 +0900
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-10-28 17:22:05 +0900
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-28 17:22:05 +0900
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-28 17:22:05 +0900
+
+
+Started GET "/assets/group.js?body=1" for 127.0.0.1 at 2014-10-28 17:22:05 +0900
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-28 17:22:05 +0900
+
+
+Started GET "/assets/group.css?body=1" for 127.0.0.1 at 2014-10-28 17:22:05 +0900
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-10-28 17:22:05 +0900
+
+
+Started GET "/users/1" for 127.0.0.1 at 2014-10-28 17:22:09 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mActiveRecord::SessionStore::Session Load (0.3ms)[0m  [1mSELECT  "sessions".* FROM "sessions"  WHERE "sessions"."session_id" = 'c79e1b2372926313372011ae66bac334'  ORDER BY "sessions"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered users/show.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 200 OK in 146ms (Views: 139.0ms | ActiveRecord: 1.2ms)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[36mGroup Load (0.8ms)[0m  [1mSELECT  "groups".* FROM "groups"   ORDER BY "groups"."id" ASC LIMIT 1[0m
+  [1m[35mGroupSubscription Load (1.0ms)[0m  SELECT "group_subscriptions".* FROM "group_subscriptions"  WHERE "group_subscriptions"."groupID" = ?  [["groupID", 2]]
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mGroupSubscription Load (0.4ms)[0m  SELECT "group_subscriptions".* FROM "group_subscriptions"  WHERE "group_subscriptions"."userID" = ?  [["userID", 4]]
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mGroupSubscription Load (0.5ms)[0m  SELECT "group_subscriptions".* FROM "group_subscriptions"  WHERE "group_subscriptions"."userID" = ?  [["userID", 4]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mGroupSubscription Load (2.5ms)[0m  SELECT "group_subscriptions".* FROM "group_subscriptions"  WHERE "group_subscriptions"."userID" = ?  [["userID", 4]]
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "group_subscriptions"  WHERE "group_subscriptions"."userID" = ?[0m  [["userID", 4]]
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[36mGroup Load (0.5ms)[0m  [1mSELECT  "groups".* FROM "groups"  WHERE "groups"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mGroupSubscription Load (0.4ms)[0m  SELECT "group_subscriptions".* FROM "group_subscriptions"  WHERE "group_subscriptions"."groupID" = ?  [["groupID", 3]]
+  [1m[36mGroup Load (0.4ms)[0m  [1mSELECT "groups".* FROM "groups"[0m
+  [1m[35mGroup Load (0.3ms)[0m  SELECT "groups".* FROM "groups"
+  [1m[36mGroup Load (0.3ms)[0m  [1mSELECT "groups".* FROM "groups"[0m
+  [1m[35mGroup Load (0.2ms)[0m  SELECT  "groups".* FROM "groups"  WHERE "groups"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mGroup Load (0.2ms)[0m  [1mSELECT  "groups".* FROM "groups"  WHERE "groups"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mGroupMaster Load (0.4ms)[0m  SELECT "group_masters".* FROM "group_masters"  WHERE "group_masters"."groupID" = ?  [["groupID", 2]]
+  [1m[36mGroup Load (0.2ms)[0m  [1mSELECT  "groups".* FROM "groups"  WHERE "groups"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mGroupSubscription Load (0.2ms)[0m  SELECT "group_subscriptions".* FROM "group_subscriptions"  WHERE "group_subscriptions"."groupID" = ?  [["groupID", 2]]
+  [1m[36mGroup Load (0.2ms)[0m  [1mSELECT  "groups".* FROM "groups"  WHERE "groups"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mGroupSubscription Load (0.2ms)[0m  SELECT "group_subscriptions".* FROM "group_subscriptions"  WHERE "group_subscriptions"."groupID" = ?  [["groupID", 2]]
+  [1m[36mGroup Load (0.3ms)[0m  [1mSELECT  "groups".* FROM "groups"  WHERE "groups"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mGroup Load (0.2ms)[0m  SELECT  "groups".* FROM "groups"  WHERE "groups"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mGroupSubscription Load (0.2ms)[0m  [1mSELECT "group_subscriptions".* FROM "group_subscriptions"  WHERE "group_subscriptions"."groupID" = ?[0m  [["groupID", 2]]
+  [1m[35mGroupMaster Load (0.4ms)[0m  SELECT  "group_masters".* FROM "group_masters"  WHERE "group_masters"."groupID" = ?  ORDER BY "group_masters"."id" ASC LIMIT 1  [["groupID", 2]]
+  [1m[36mGroupMaster Load (0.2ms)[0m  [1mSELECT  "group_masters".* FROM "group_masters"  WHERE "group_masters"."groupID" = ?  ORDER BY "group_masters"."id" ASC LIMIT 1[0m  [["groupID", 2]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mGroupMaster Load (0.2ms)[0m  [1mSELECT  "group_masters".* FROM "group_masters"  WHERE "group_masters"."groupID" = ?  ORDER BY "group_masters"."id" ASC LIMIT 1[0m  [["groupID", 2]]
+  [1m[35mGroupMaster Load (0.2ms)[0m  SELECT  "group_masters".* FROM "group_masters"  WHERE "group_masters"."groupID" = ?  ORDER BY "group_masters"."id" ASC LIMIT 1  [["groupID", 2]]
+  [1m[36mGroupMaster Load (0.2ms)[0m  [1mSELECT  "group_masters".* FROM "group_masters"  WHERE "group_masters"."groupID" = ?  ORDER BY "group_masters"."id" ASC LIMIT 1[0m  [["groupID", 2]]
+  [1m[35mGroupMaster Load (0.2ms)[0m  SELECT  "group_masters".* FROM "group_masters"  WHERE "group_masters"."groupID" = ?  ORDER BY "group_masters"."id" ASC LIMIT 1  [["groupID", 2]]
+  [1m[36mGroupMaster Load (0.2ms)[0m  [1mSELECT  "group_masters".* FROM "group_masters"  WHERE "group_masters"."groupID" = ?  ORDER BY "group_masters"."id" ASC LIMIT 1[0m  [["groupID", 2]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mGroupMaster Load (0.2ms)[0m  [1mSELECT  "group_masters".* FROM "group_masters"  WHERE "group_masters"."groupID" = ?  ORDER BY "group_masters"."id" ASC LIMIT 1[0m  [["groupID", 2]]
+  [1m[35mGroupMaster Load (0.3ms)[0m  SELECT  "group_masters".* FROM "group_masters"  WHERE "group_masters"."groupID" = ?  ORDER BY "group_masters"."id" ASC LIMIT 1  [["groupID", 2]]

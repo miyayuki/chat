@@ -6,4 +6,6 @@
 <%= @group.id %>
 </h2>
 
-<%= link_to "delete", @group, method: :delete,data: { confirm: "You sure?" } %>
+<% if current_user.master(@group.id) == true%>
+	<%= link_to "delete", @group, method: :delete,data: { confirm: "You sure?" } %>
+<% end %>
