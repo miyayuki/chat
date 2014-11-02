@@ -11,7 +11,8 @@ class GroupsController < ApplicationController
 		@group_subscription.userID = current_user.id
 		@group_subscription.save
 
-		for id in params[:group_users] do
+		p params[:group_users]
+		for id in params[:group_users] || [] do
 			p id
 			@group_subscription = GroupSubscription.new
 			@group_subscription.groupID = @group.id
@@ -32,6 +33,11 @@ class GroupsController < ApplicationController
 	end
 
 	def edit
+		@users = User.all
+		#このグループに所属してるユーザ、グループ名
+		p params[:id]
+		@groups = Group.find(params[:id])
+		p @groups
 	end
 
 	def index
@@ -45,7 +51,7 @@ class GroupsController < ApplicationController
 
 	def show
 		@group = Group.find(params[:id])
-		@gid = @group.group_masters.find(@group.id)
+		@gmaster = @group.group_masters
+		@gsub = @group.group_subscriptions
 	end
-	private
 end

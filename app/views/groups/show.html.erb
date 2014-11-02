@@ -6,12 +6,26 @@
 <%= @group.id %>
 </h2>
 
-このグループの管理者は
-<%= @gid.user.username %>
-です
-<% if current_user.id == @gid.user.id %>
-	<br>
+[管理者]
+<ul>
+<% @gmaster.each do |g|  %>
+<li>
+<%= g.user.username %>
+</li>
+<% end %>
+</ul>
+[メンバー]
+<ul>
+<% @gsub.each do |g|  %>
+<li>
+<%= g.user.username %>
+</li>
+<% end %>
+</ul>
+<% @gmaster.each do |g|  %>
+	<% if current_user.id == g.user.id %>
 	<%= link_to "グループ消去", @group, method: :delete,data: { confirm: "You sure?" } %>
 	<br>
 	<%= link_to("グループ編集", :controller => :groups, :action => :edit ) %>
+	<% end %>
 <% end %>

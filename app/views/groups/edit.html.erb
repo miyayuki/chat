@@ -1,1 +1,16 @@
-<h1>edit</h1>
+<h2>edit your group</h2>
+
+<ul class="users">
+	<%= form_tag :action => :create do %>
+	
+	<br>
+		<% @groups.group_subscriptions.each do |g| %>
+			<br>
+			グループに入っているユーザ一覧
+			<%= g.userID%>
+			<!--% if @users.find(1).id == g.userID %>
+			<!--%= g.userID%>
+			<!--% end %-->
+		<% end %>
+	<% end %>
+</ul>
