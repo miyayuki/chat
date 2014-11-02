@@ -33,11 +33,17 @@ class GroupsController < ApplicationController
 	end
 
 	def edit
-		@users = User.all
-		#このグループに所属してるユーザ、グループ名
-		p params[:id]
-		@groups = Group.find(params[:id])
-		p @groups
+		@group = Group.find(params[:id])
+	end
+
+	def update
+		@group = Group.find(params[:id])
+		p 'ぱらむす'
+		p params[:group][:name]
+		p 'あっぷでーと'
+		pp @group
+		@group.update(name: params[:group][:name])
+		redirect_to root_url
 	end
 
 	def index
