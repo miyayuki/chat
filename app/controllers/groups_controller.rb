@@ -52,12 +52,17 @@ class GroupsController < ApplicationController
 
 	def new
 		#@group = Group.new
-		@users = User.all
+		sages.buildusers = User.all
   end
 
 	def show
 		@group = Group.find(params[:id])
 		@gmaster = @group.group_masters
 		@gsub = @group.group_subscriptions
+		#@message = @group.messages.paginate(page: params[:page])
+		@message = @group.messages.build
+		@messages = @group.messages
+		p "グループ"
+		p @messages
 	end
 end

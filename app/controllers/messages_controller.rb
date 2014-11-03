@@ -19,9 +19,9 @@ class MessagesController < ApplicationController
   end
 
   def create
+		p "メッセージ作成"
     @message = Message.new(message_params)
-    @message.save
-    respond_with(@message)
+    #@message.save
   end
 
   def update
@@ -40,6 +40,7 @@ class MessagesController < ApplicationController
     end
 
     def message_params
+			p "ぱらむす"
       params.require(:message).permit(:group_id, :user_id, :content, :created_id)
     end
 end

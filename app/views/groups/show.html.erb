@@ -2,6 +2,19 @@
 グループ<%= @group.id %> : <%= @group.name %>
 </h1>
 
+<div>
+	<% if @group.messages.any? %>
+		<h3>チャットルーム</h3>
+	<% end %>
+</div>
+
+<div>
+	<section>
+		<%= render 'shared/message_form' %>
+	</section>
+</div>
+
+</div>
 [管理者]
 <ul>
 <% @gmaster.each do |g|  %>
@@ -24,3 +37,4 @@
 	<%= link_to("グループ編集", :controller => :groups, :action => :edit ) %>
 	<% end %>
 <% end %>
+</div>
