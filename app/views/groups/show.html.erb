@@ -1,10 +1,6 @@
 <h1>
-<%= @group.name %>
+グループ<%= @group.id %> : <%= @group.name %>
 </h1>
-
-<h2>
-<%= @group.id %>
-</h2>
 
 [管理者]
 <ul>
@@ -25,7 +21,6 @@
 <% @gmaster.each do |g|  %>
 	<% if current_user.id == g.user.id %>
 	<%= link_to "グループ消去", @group, method: :delete,data: { confirm: "You sure?" } %>
-	<br>
 	<%= link_to("グループ編集", :controller => :groups, :action => :edit ) %>
 	<% end %>
 <% end %>
