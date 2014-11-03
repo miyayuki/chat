@@ -1,0 +1,7 @@
+<%= form_for(@message) do |f| %>
+	<div class="field">
+		チャットに投稿<br>
+		<%= f.text_area :content, placeholder: "メッセージを書いてください"%>
+	</div>
+	<%= f.submit "送信", class: "btn btn-large btn-primary" %>
+<% end %>
