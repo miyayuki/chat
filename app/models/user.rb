@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 	has_many :group_subscriptions, foreign_key: 'userID'
 	has_many :group_masters, foreign_key: 'userID'
-	has_many :microposts, foreign_key: 'user_id'
+	has_many :messages, foreign_key: 'user_id'
 
 	def self.find_first_by_auth_conditions(warden_conditions)
 		conditions = warden_conditions.dup

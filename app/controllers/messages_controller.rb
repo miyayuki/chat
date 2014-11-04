@@ -28,7 +28,7 @@ class MessagesController < ApplicationController
 		p @message
 
 		@message.save
-		redirect_to groups_path
+		redirect_to group_path @message.group_id
   end
 
   def update

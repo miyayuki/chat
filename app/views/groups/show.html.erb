@@ -33,7 +33,7 @@
 <% end %>
 </ul>
 <% @gmaster.each do |g|  %>
-	<% if current_user.id == g.user.id %>
+	<% if current_user &&  current_user.id == g.user.id %>
 	<%= link_to "グループ消去", @group, method: :delete,data: { confirm: "You sure?" } %>
 	<%= link_to("グループ編集", :controller => :groups, :action => :edit ) %>
 	<% end %>

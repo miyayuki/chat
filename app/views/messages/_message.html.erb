@@ -1,9 +1,9 @@
 <li>
 	メッセージ内容
 	<span class="content">
-	<%= @group.messages.each do |m| %>
+	<%- @group.messages.each do |m| %>
 		<li>
-		<%= m.user_id %>:<%= m.content %>
+		<strong><%= m.user.username%></strong>:<%= m.content %>
 		</li>
 	<% end %>
 	</span>
