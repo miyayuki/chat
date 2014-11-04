@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   resources :messages, only:[:create, :destroy]
 
+	post 'groups/:group_id/message' => 'messages#create'
 #  get 'users/new'
 #  get 'groups/new'
 
@@ -10,6 +11,8 @@ Rails.application.routes.draw do
 	root :to => "home#index"
 	resources :users
 	resources :groups
+
+	get 'groups/:group_id/message' => 'messages#create'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

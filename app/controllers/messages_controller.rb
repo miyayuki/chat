@@ -2,8 +2,8 @@ class MessagesController < ApplicationController
   before_action :set_message, only: [:show, :edit, :update, :destroy]
 
   def index
-    @messages = Message.all
-    respond_with(@messages)
+#    @messages = Message.all
+#    respond_with(@messages)
   end
 
   def show
@@ -20,8 +20,15 @@ class MessagesController < ApplicationController
 
   def create
 		p "メッセージ作成"
-    @message = Message.new(message_params)
-    #@message.save
+		params[:user_id] = current_user.id
+    @message = Message.new
+		@message.group_id = params[:group_id]
+		@message.user_id = params[:user_id]
+		@message.content = params[:message][:content]
+		p @message
+
+		@message.save
+		redirect_to groups_path
   end
 
   def update
@@ -41,6 +48,8 @@ class MessagesController < ApplicationController
 
     def message_params
 			p "ぱらむす"
-      params.require(:message).permit(:group_id, :user_id, :content, :created_id)
+			p params
+			params[:user_id] = current_user.id
+      #params.require(:message).permit(:group_id, :user_id, :content, :created_id)
     end
 end

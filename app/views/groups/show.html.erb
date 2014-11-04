@@ -5,6 +5,7 @@
 <div>
 	<% if @group.messages.any? %>
 		<h3>チャットルーム</h3>
+		<%= render 'messages/message' %>
 	<% end %>
 </div>
 
