@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
 	has_many :group_subscriptions, foreign_key: 'userID'
 	has_many :group_masters, foreign_key: 'userID'
 	has_many :messages, foreign_key: 'user_id'
+	has_many :groups, through: :group_subscriptions
 
 	def self.find_first_by_auth_conditions(warden_conditions)
 		conditions = warden_conditions.dup

@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+	before_action :signed_in_user
 	
 	def index
 		@users = User.all
@@ -17,8 +18,11 @@ class UsersController < ApplicationController
 	end
 
 private
+	def signed_in_user
+		redirect_to root_url unless signed_in?
+	end
+
 	def user_params
 		params.require(:user).permit(:name, :email)
 	end
-
 end

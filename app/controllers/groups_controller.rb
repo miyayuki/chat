@@ -1,4 +1,5 @@
 class GroupsController < ApplicationController
+	before_action :signed_in_user
 
 	def create
 
@@ -38,16 +39,36 @@ class GroupsController < ApplicationController
 
 	def update
 		@group = Group.find(params[:id])
-		p 'ぱらむす'
-		p params[:group][:name]
-		p 'あっぷでーと'
-		pp @group
 		@group.update(name: params[:group][:name])
 		redirect_to root_url
 	end
 
 	def index
+		user = User.first
+		group_ids = GroupSubscription.where(userID: current_user.id).select(:groupID)
+		@groups=Group.where(id: group_ids)
+		@groups.each do |g|
+			p g
+		end
+=begin
 		@groups = Group.all
+		@groups.each do|g|
+			g.group_subscriptions.each do|s|
+				p g.class
+				@group = Group.new(g)
+			end
+		end
+		p 'グループ'
+		p @group
+			if s.user.id == current_user.id
+				p '自分が所属してるグループです'
+				p s
+				@group = s
+			else
+				#return render plain: 'Bad person', status: :bad_request
+			end
+			end
+=end
 	end
 
 	def new
@@ -59,10 +80,28 @@ class GroupsController < ApplicationController
 	end
 
 	def show
+=begin
+		if current_user.blank?
+			return render plain: 'Bad person', status: :bad_request
+		end
+=end
 		@group = Group.find(params[:id])
-		@gmaster = @group.group_masters
-		@gsub = @group.group_subscriptions
-		#@message = @group.messages.paginate(page: params[:page])
-		@message = Message.new
+		if !@group.group_subscriptions.where(userID: current_user.id).exists?
+			return render plain: 'Bad person', status: :bad_request
+		end
+		@group.group_subscriptions.each do |g|
+			if g.user.id == current_user.id
+				@gmaster = @group.group_masters
+				@gsub = @group.group_subscriptions
+				@message = Message.new
+			else
+				p 'このグループのメンバーではありません'
+			end
+		end
+	end
+
+	private
+	def signed_in_user
+		redirect_to root_url unless signed_in?
 	end
 end

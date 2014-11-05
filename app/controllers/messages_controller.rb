@@ -1,5 +1,6 @@
 class MessagesController < ApplicationController
-  before_action :set_message, only: [:show, :edit, :update, :destroy]
+#  before_action :set_message, only: [:show, :edit, :update, :destroy]
+	before_action :signed_in_user, only:[:create, :destroy]
 
   def index
 #    @messages = Message.all
@@ -20,6 +21,16 @@ class MessagesController < ApplicationController
 
   def create
 		p "メッセージ作成"
+		@group = Group.find(params[:group_id])
+		p @group.name
+		@group.group_subscriptions.each do |g|
+			if g.user.id == current_user.id
+				p current_user.username
+			else
+				p g.user.username
+			end
+		end
+=begin
 		params[:user_id] = current_user.id
     @message = Message.new
 		@message.group_id = params[:group_id]
@@ -29,6 +40,7 @@ class MessagesController < ApplicationController
 
 		@message.save
 		redirect_to group_path @message.group_id
+=end
   end
 
   def update
@@ -45,6 +57,10 @@ class MessagesController < ApplicationController
     def set_message
       @message = Message.find(params[:id])
     end
+
+		def signed_in_user
+			redirect_to root_url unless signed_in?
+		end
 
     def message_params
 			p "ぱらむす"
