@@ -20,6 +20,7 @@ class MessagesController < ApplicationController
   end
 
   def create
+=begin
 		p "メッセージ作成"
 		@group = Group.find(params[:group_id])
 		p @group.name
@@ -30,7 +31,7 @@ class MessagesController < ApplicationController
 				p g.user.username
 			end
 		end
-=begin
+=end
 		params[:user_id] = current_user.id
     @message = Message.new
 		@message.group_id = params[:group_id]
@@ -40,7 +41,6 @@ class MessagesController < ApplicationController
 
 		@message.save
 		redirect_to group_path @message.group_id
-=end
   end
 
   def update

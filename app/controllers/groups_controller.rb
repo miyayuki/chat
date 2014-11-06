@@ -47,25 +47,6 @@ class GroupsController < ApplicationController
 		user = User.first
 		group_ids = GroupSubscription.where(userID: current_user.id).select(:groupID)
 		@groups=Group.where(id: group_ids)
-=begin
-		@groups = Group.all
-		@groups.each do|g|
-			g.group_subscriptions.each do|s|
-				p g.class
-				@group = Group.new(g)
-			end
-		end
-		p 'グループ'
-		p @group
-			if s.user.id == current_user.id
-				p '自分が所属してるグループです'
-				p s
-				@group = s
-			else
-				#return render plain: 'Bad person', status: :bad_request
-			end
-			end
-=end
 	end
 
 	def new
@@ -87,13 +68,9 @@ class GroupsController < ApplicationController
 			return render plain: 'Bad person', status: :bad_request
 		end
 		@group.group_subscriptions.each do |g|
-			if g.user.id == current_user.id
-				@gmaster = @group.group_masters
-				@gsub = @group.group_subscriptions
-				@message = Message.new
-			else
-				p 'このグループのメンバーではありません'
-			end
+			@gmaster = @group.group_masters
+			@gsub = @group.group_subscriptions
+			@message = Message.new
 		end
 	end
 
