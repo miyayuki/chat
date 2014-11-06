@@ -47,9 +47,6 @@ class GroupsController < ApplicationController
 		user = User.first
 		group_ids = GroupSubscription.where(userID: current_user.id).select(:groupID)
 		@groups=Group.where(id: group_ids)
-		@groups.each do |g|
-			p g
-		end
 =begin
 		@groups = Group.all
 		@groups.each do|g|
