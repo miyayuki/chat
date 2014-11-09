@@ -7,24 +7,8 @@ class GroupsController < ApplicationController
 		@group.name = params[:group][:name]
 		@group.save
 
-		@group_subscription = GroupSubscription.new
-		@group_subscription.groupID = @group.id
-		@group_subscription.userID = current_user.id
-		@group_subscription.save
-
-		p params[:group_users]
-		for id in params[:group_users] || [] do
-			p id
-			@group_subscription = GroupSubscription.new
-			@group_subscription.groupID = @group.id
-			@group_subscription.userID = id.to_i
-			@group_subscription.save
-		end
-
-		@group_master = GroupMaster.new
-		@group_master.groupID = @group.id
-		@group_master.userID = current_user.id
-		@group_master.save
+		add_group_subscription
+		add_group_master
 	end
 
 	def destroy
@@ -77,5 +61,26 @@ class GroupsController < ApplicationController
 	private
 	def signed_in_user
 		redirect_to root_url unless signed_in?
+	end
+
+	def add_group_subscription
+		group_subscription = GroupSubscription.new
+		group_subscription.groupID = @group.id
+		group_subscription.userID = current_user.id
+		group_subscription.save
+
+		for id in params[:group_users] || [] do
+			group_subscription = GroupSubscription.new
+			group_subscription.groupID = @group.id
+			group_subscription.userID = id.to_i
+			group_subscription.save
+		end
+	end
+
+	def add_group_master
+		group_master = GroupMaster.new
+		group_master.groupID = @group.id
+		group_master.userID = current_user.id
+		group_master.save
 	end
 end
