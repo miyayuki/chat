@@ -2,7 +2,7 @@
 グループ<%= @group.id %> : <%= @group.name %>
 </h1>
 
-<div>
+<div id="messages">
 	<% if @group.messages.any? %>
 		<h3>チャットルーム</h3>
 		<%= render 'messages/message' %>

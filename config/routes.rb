@@ -10,7 +10,11 @@ Rails.application.routes.draw do
   devise_for :users
 	root :to => "home#index"
 	resources :users
-	resources :groups
+	resources :groups do
+		member do
+			get '/messages', to: 'groups#messages'
+		end
+	end
 
 	get 'groups/:group_id/message' => 'messages#create'
 

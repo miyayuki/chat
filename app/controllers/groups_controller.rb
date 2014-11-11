@@ -38,7 +38,10 @@ class GroupsController < ApplicationController
 		@users = User.all
   end
 
-	def message
+	def messages
+		#render plain: 'hello'
+		@group = Group.find(params[:id])
+		render json: @group.messages
 	end
 
 	def show
