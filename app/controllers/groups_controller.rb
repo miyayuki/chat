@@ -29,7 +29,7 @@ class GroupsController < ApplicationController
 
 	def index
 		user = User.first
-		group_ids = GroupSubscription.where(userID: current_user.id).select(:groupID)
+		group_ids = GroupSubscription.where(user_id: current_user.id).select(:group_id)
 		@groups=Group.where(id: group_ids)
 	end
 
@@ -51,7 +51,7 @@ class GroupsController < ApplicationController
 		end
 =end
 		@group = Group.find(params[:id])
-		if !@group.group_subscriptions.where(userID: current_user.id).exists?
+		if !@group.group_subscriptions.where(user_id: current_user.id).exists?
 			return render plain: 'Bad person', status: :bad_request
 		end
 		@group.group_subscriptions.each do |g|
@@ -68,22 +68,22 @@ class GroupsController < ApplicationController
 
 	def add_group_subscription
 		group_subscription = GroupSubscription.new
-		group_subscription.groupID = @group.id
-		group_subscription.userID = current_user.id
+		group_subscription.group_id = @group.id
+		group_subscription.user_id = current_user.id
 		group_subscription.save
 
 		for id in params[:group_users] || [] do
 			group_subscription = GroupSubscription.new
-			group_subscription.groupID = @group.id
-			group_subscription.userID = id.to_i
+			group_subscription.group_id = @group.id
+			group_subscription.user_id = id.to_i
 			group_subscription.save
 		end
 	end
 
 	def add_group_master
 		group_master = GroupMaster.new
-		group_master.groupID = @group.id
-		group_master.userID = current_user.id
+		group_master.group_id = @group.id
+		group_master.user_id = current_user.id
 		group_master.save
 	end
 end
