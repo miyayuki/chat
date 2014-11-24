@@ -2,11 +2,9 @@
 グループ<%= @group.id %> : <%= @group.name %>
 </h1>
 
+<h3>チャットルーム</h3>
+<%= javascript_tag "reload_messages(#{@group.id})" %>
 <div id="messages">
-	<% if @group.messages.any? %>
-		<h3>チャットルーム</h3>
-		<%= render 'messages/message' %>
-	<% end %>
 </div>
 
 <div>
